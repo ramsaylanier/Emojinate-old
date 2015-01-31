@@ -1,0 +1,72 @@
+.form-wrapper{
+	width: 100%;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form-control{
+	margin-bottom: .75rem;
+	@include transition(all 1000ms ease-out);
+
+	&.off-page{
+		opacity: 0.0;
+	}
+}
+
+.text-field, .password-field, .email-field{
+	font-size: 1rem;
+	padding: .5rem .5rem;
+	border: 1px solid $highlight;
+	font-family: $sansSerif;
+	width: 100%;
+	@include transition(all 200ms ease-out);
+
+	&:focus{
+		background-color: $highlight;
+		color: white;
+		outline: none;
+
+		@include input-placeholder{
+			color: white;
+		}
+	}
+
+	@include input-placeholder{
+		color: $highlight;
+	}
+}
+
+.login-form, .register-form{
+	margin-top: 3rem;
+}
+
+.forgot-password-form{
+	margin-top: 1rem;
+}
+
+.register-link{
+	color: $highlight;
+	text-align: center;
+	display: block;
+}
+
+.forgot-password-link{
+	font-size: .8rem;
+	text-align: center;
+	display: block;
+}
+
+input[type=submit]{
+	border: 0px;
+	background-color: darken($highlight, 10%);
+	color: white;
+	width: 100%;
+	padding: .5rem 1rem;
+	font-size: 1.3rem;
+	cursor: pointer;
+
+	&:hover{
+		background-color: darken($highlight, 20%);
+	}
+}

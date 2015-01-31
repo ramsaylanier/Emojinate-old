@@ -1,0 +1,11 @@
+<template name="loading">
+	<div class="loading-wrapper">
+		{{#each randomEmojis}}
+			<span class="emoji off-page">{{#emojione}}{{this.shortname}}{{/emojione}}</span>
+		{{/each}}
+	</div>
+</template>
+
+<template name="loadingEmoji">
+	<span class="emoji off-page">{{#emojione}}{{this.shortname}}{{/emojione}}</span>
+</template>

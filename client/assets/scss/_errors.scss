@@ -1,0 +1,16 @@
+.errors{
+	top: 38px;
+	position: fixed;
+	width: 100%;
+
+	@media #{$mobile}{
+		top: 25px;
+	}
+}
+
+.error{
+	background-color: white;
+	border-top: 3px solid $highlight;
+	border-bottom: 3px solid $highlight;
+	padding: .25em 0em;
+}

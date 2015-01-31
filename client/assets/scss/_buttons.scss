@@ -1,0 +1,26 @@
+.btn{
+	border: 0;
+	padding: .25em .5em;
+	font-size: .9rem;
+	cursor: pointer;
+	font-family: $sansSerif;
+}
+
+.primary-btn{
+	padding: .5em;
+	background-color: $highlight;
+	color: white;
+	text-align: center;
+}
+
+.create-story-btn{
+	float: right;
+}
+
+.delete-story-btn{
+	float: right;
+}
+
+.read-more-btn{
+	float: right;
+}

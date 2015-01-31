@@ -1,0 +1,68 @@
+<template name="storyList">
+
+	{{#if noUser}}
+	<section class="welcome-section main-section">
+		<div class="wrapper">
+			<header class="welcome-header">
+				<h2 class="welcome-title">Welcome To Emojinate</h2>
+				<p>Where emojinations run wild</p>
+				<p class="random-emojis">
+					{{#each randomEmojis}}
+						<span class="emoji">{{#emojione}}{{this.shortname}}{{/emojione}}</span>
+					{{/each}}
+				</p>
+			</header>
+
+			<div class="welcome-text">
+				<div class="wrapper story-wrapper">
+					<p>Emojinate is a story/blogging platform that gives you a string of 20 random emojis that you craft a story around. Start by reading a couple examples.</p>
+					<p>If you like what you see, then <a class="get-started-link strong" href="/login">get started!</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	{{/if}}
+
+	<section class="story-list-section main-section {{#if currentUser}}with-user{{/if}}">
+
+		<header class="story-header">
+			<div class="wrapper story-wrapper">
+				<h3 class="story-title strong">Recent Emojinations</h3>
+			</div>
+		</header>
+
+		<div class="story-list">
+			<div class="wrapper story-wrapper">
+				{{#if this}}
+					<div class="user-stories">
+						{{#each this}}
+							{{>storyListExcerpt}}
+						{{/each}}
+					</div>
+				{{else}}
+					<p>There are no recent deepmojis.</p>
+				{{/if}}
+			</div>
+		</div>
+	</section>
+</template>
+
+<template name="storyListExcerpt">
+	<div class="user-story excerpt off-page">
+		<p class="story-title">
+			<a href="{{pathFor route='storySingle'}}">{{{title}}}</a>
+			<p class="story-author">- by {{authorName}}</p>
+		</p>
+		<div class="story-date">
+			<p>{{publishedOnDate}},</p>
+			<p>{{publishedOnYear}}</p>
+		</div>
+		<p class="emoji-string">
+			{{#each emojiExcerpt}}
+				<span class="emoji">{{#emojione}}{{this}}{{/emojione}}</span>
+			{{/each}}
+		</p>
+		<p class="story-text">"{{{textExcerpt}}}..."</p>
+		<a class="btn primary-btn read-more-btn" href="{{pathFor route='storySingle'}}">Read More</a>
+	</div>
+</template>

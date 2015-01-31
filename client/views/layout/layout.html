@@ -1,0 +1,43 @@
+<head>
+	<title>Emojinate</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	
+	<meta property="og:title" content="Emojinate">
+	<meta property="og:site_name" content="Emojinate">
+	<meta property="og:url" content="http://emojinate.meteor.com">
+	<meta property="og:description" content="Emojinate is a story/blogging platform based around randomly generated emojis.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="http://emojinate.meteor.com/facebook-logo.png" />
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="verybadhello">
+	<meta name="twitter:title" content="Emojinate">
+	<meta name="twitter:description" content="Emojinate is a story/blogging platform based around randomly generated emojis.">
+	<meta name="twitter:image:src" content="http://emojinate.meteor.com/facebook-logo.png">
+</head>
+
+<template name="layout">
+	<!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5MZJTF"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5MZJTF');</script>
+	<!-- End Google Tag Manager -->
+
+	<div class="application">
+		<header class="header">
+			<div class="wrapper">
+				{{> header}}
+			</div>
+		</header>
+		{{>errors}}
+
+		<div class="main">
+			{{> yield}}
+		</div>
+	</div>
+</template>

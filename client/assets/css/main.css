@@ -1,0 +1,1146 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Fauna+One);
+/* line 5, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 6, ../scss/_vars.scss */
+.purple {
+  color: #DA3D3D;
+}
+
+/*!
+Typeplate : Starter Kit
+URL ........... http://typeplate.com
+Version ....... 2.0.0
+Github ........ https://github.com/typeplate/starter-kit
+Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+License ....... Creative Commmons Attribution 3.0
+License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+*/
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
+  unicode-range: U+0026;
+}
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia");
+  unicode-range: U+270C;
+}
+/* line 36, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-tera, .typl8-giga, .typl8-mega, h1, .typl8-alpha, h2, .typl8-beta, h3, .typl8-gamma, h4, .typl8-delta, h5, .typl8-epsilon, .typl8-zeta, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  color: #444;
+}
+
+/* line 19, ../scss/typeplate/_typeplate-extends.scss */
+blockquote + figcaption cite {
+  display: block;
+  font-size: inherit;
+  text-align: right;
+}
+
+/* line 33, ../scss/typeplate/_typeplate-extends.scss */
+body {
+  word-wrap: break-word;
+}
+
+/* line 37, ../scss/typeplate/_typeplate-extends.scss */
+pre code {
+  word-wrap: normal;
+}
+
+/* line 4, ../scss/typeplate/_typeplate-styles.scss */
+html {
+  font: normal 112.5%/1.65 serif;
+}
+
+/* line 12, ../scss/typeplate/_typeplate-styles.scss */
+body {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  color: #444;
+  font-family: "Fauna One", sans-serif;
+}
+
+/* line 19, ../scss/typeplate/_typeplate-styles.scss */
+a {
+  text-decoration: none;
+  color: #DA3D3D;
+}
+
+/* line 45, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-tera {
+  font-size: 117px;
+  font-size: 6.5rem;
+  margin-bottom: 4.56923px;
+  margin-bottom: 0.25385rem;
+  text-transform: uppercase;
+}
+
+/* line 45, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-giga {
+  font-size: 90px;
+  font-size: 5rem;
+  margin-bottom: 5.94px;
+  margin-bottom: 0.33rem;
+  text-transform: uppercase;
+}
+
+/* line 45, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-mega, h1 {
+  font-size: 72px;
+  font-size: 4rem;
+  margin-bottom: 7.425px;
+  margin-bottom: 0.4125rem;
+  text-transform: uppercase;
+}
+
+/* line 45, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-alpha, h2 {
+  font-size: 60px;
+  font-size: 3.33333rem;
+  margin-bottom: 8.91px;
+  margin-bottom: 0.495rem;
+  text-transform: uppercase;
+}
+
+/* line 45, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-beta, h3 {
+  font-size: 48px;
+  font-size: 2.66667rem;
+  margin-bottom: 11.1375px;
+  margin-bottom: 0.61875rem;
+  text-transform: uppercase;
+}
+
+/* line 45, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-gamma, h4 {
+  font-size: 36px;
+  font-size: 2rem;
+  margin-bottom: 14.85px;
+  margin-bottom: 0.825rem;
+  text-transform: uppercase;
+}
+
+/* line 45, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-delta, h5 {
+  font-size: 24px;
+  font-size: 1.33333rem;
+  margin-bottom: 22.275px;
+  margin-bottom: 1.2375rem;
+  text-transform: uppercase;
+}
+
+/* line 45, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-epsilon {
+  font-size: 21px;
+  font-size: 1.16667rem;
+  margin-bottom: 25.45714px;
+  margin-bottom: 1.41429rem;
+  text-transform: uppercase;
+}
+
+/* line 45, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-zeta, h6 {
+  font-size: 18px;
+  font-size: 1rem;
+  margin-bottom: 29.7px;
+  margin-bottom: 1.65rem;
+  text-transform: uppercase;
+}
+
+/* line 61, ../scss/typeplate/_typeplate-mixins.scss */
+h1 {
+  font-family: "Playfair Display", serif;
+}
+
+/* line 61, ../scss/typeplate/_typeplate-mixins.scss */
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+/* line 61, ../scss/typeplate/_typeplate-mixins.scss */
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+/* line 61, ../scss/typeplate/_typeplate-mixins.scss */
+h4 {
+  font-family: "Playfair Display", serif;
+}
+
+/* line 61, ../scss/typeplate/_typeplate-mixins.scss */
+h5 {
+  font-family: "Playfair Display", serif;
+}
+
+/* line 61, ../scss/typeplate/_typeplate-mixins.scss */
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+/* line 59, ../scss/typeplate/_typeplate-styles.scss */
+small {
+  font-size: 65%;
+}
+
+/* line 69, ../scss/typeplate/_typeplate-styles.scss */
+input,
+abbr,
+acronym,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* line 85, ../scss/typeplate/_typeplate-styles.scss */
+pre {
+  white-space: pre;
+}
+/* line 88, ../scss/typeplate/_typeplate-styles.scss */
+pre code {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+
+/* line 94, ../scss/typeplate/_typeplate-styles.scss */
+code {
+  white-space: pre;
+  font-family: monospace;
+}
+
+/* line 103, ../scss/typeplate/_typeplate-styles.scss */
+abbr {
+  -webkit-font-variant: small-caps;
+  -moz-font-variant: small-caps;
+  -ms-font-variant: small-caps;
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: #ccc;
+}
+/* line 105, ../scss/typeplate/_typeplate-styles.scss */
+abbr[title]:hover {
+  cursor: help;
+}
+
+/* line 111, ../scss/typeplate/_typeplate-styles.scss */
+.strong {
+  font-weight: 700;
+}
+
+/* line 115, ../scss/typeplate/_typeplate-styles.scss */
+.light {
+  font-weight: 100;
+}
+
+/* line 119, ../scss/typeplate/_typeplate-styles.scss */
+.medium {
+  font-weight: 500;
+}
+
+/* line 123, ../scss/typeplate/_typeplate-styles.scss */
+.italic {
+  font-style: italic;
+}
+
+/* line 127, ../scss/typeplate/_typeplate-styles.scss */
+.large {
+  font-size: 1.3rem;
+}
+
+/* line 131, ../scss/typeplate/_typeplate-styles.scss */
+.serif {
+  font-family: "Playfair Display", serif;
+}
+
+/* line 203, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-drop-cap:first-letter {
+  float: left;
+  margin: 10px 10px 0 0;
+  padding: 0 20px;
+  font-size: 4em;
+  font-family: inherit;
+  line-height: 1;
+  text-indent: 0;
+  background: transparent;
+  color: inherit;
+}
+
+/* line 20, ../scss/typeplate/_typeplate-helpers.scss */
+p + .typl8-drop-cap {
+  text-indent: 0;
+  margin-top: 0;
+}
+
+/**
+ * Lining Definition Style Markup
+ *
+  <dl class="typl8-lining">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 238, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-lining dt,
+.typl8-lining dd {
+  display: inline;
+  margin: 0;
+}
+/* line 247, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-lining dt + dt:before,
+.typl8-lining dd + dt:before {
+  content: "\A";
+  white-space: pre;
+}
+/* line 256, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-lining dd + dd:before {
+  content: ", ";
+}
+/* line 260, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-lining dd:before {
+  content: ": ";
+  margin-left: -0.2rem;
+}
+
+/**
+ * Dictionary Definition Style Markup
+ *
+  <dl class="typl8-dictionary-style">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 268, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-dictionary-style dt {
+  display: inline;
+  counter-reset: definitions;
+}
+/* line 272, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-dictionary-style dt + dt:before {
+  content: ", ";
+  margin-left: -0.2rem;
+}
+/* line 279, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-dictionary-style dd {
+  display: block;
+  counter-increment: definitions;
+}
+/* line 282, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-dictionary-style dd:before {
+  content: counter(definitions,decimal) ". ";
+}
+
+/**
+ * Blockquote Markup
+ *
+    <figure>
+      <blockquote cite="">
+        <p></p>
+      </blockquote>
+      <figcaption>
+        <cite>
+          <small><a href=""></a></small>
+        </cite>
+      </figcaption>
+    </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Pull Quotes Markup
+ *
+  <aside class="typl8-pull-quote">
+    <blockquote>
+      <p></p>
+    </blockquote>
+  </aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+/* line 100, ../scss/typeplate/_typeplate-helpers.scss */
+.typl8-pull-quote {
+  position: relative;
+  padding: 1em;
+}
+/* line 162, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-pull-quote:before, .typl8-pull-quote:after {
+  height: 1em;
+  opacity: 0.5;
+  position: absolute;
+  font-size: 4em;
+  color: #dc976e;
+}
+/* line 171, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-pull-quote:before {
+  content: '“';
+  top: 0;
+  left: 0;
+}
+/* line 177, ../scss/typeplate/_typeplate-mixins.scss */
+.typl8-pull-quote:after {
+  content: '”';
+  bottom: 0;
+  right: 0;
+}
+
+/**
+ * Figures Markup
+ *
+  <figure>
+    <figcaption>
+      <strong>Fig. X.X | </strong><cite title=""></cite>
+    </figcaption>
+  </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+  <article>
+    <p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+    <footer>
+      <ol class="foot-notes">
+        <li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+      </ol>
+    </footer>
+  </article>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 1, ../scss/_base.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 568px) {
+  /* line 5, ../scss/_base.scss */
+  html {
+    font-size: 80%;
+  }
+}
+
+/* line 11, ../scss/_base.scss */
+.wrapper {
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 18, ../scss/_base.scss */
+.main {
+  padding-top: 40px;
+}
+@media only screen and (max-width: 568px) {
+  /* line 18, ../scss/_base.scss */
+  .main {
+    padding-top: 30px;
+  }
+}
+
+/* line 26, ../scss/_base.scss */
+.main-section {
+  position: fixed;
+  width: 50vw;
+  height: 100vh;
+  overflow: auto;
+  padding-bottom: 2rem;
+}
+@media only screen and (max-width: 568px) {
+  /* line 26, ../scss/_base.scss */
+  .main-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* line 40, ../scss/_base.scss */
+.welcome-section {
+  left: 0;
+  border-right: 3px solid #DA3D3D;
+}
+@media only screen and (max-width: 568px) {
+  /* line 40, ../scss/_base.scss */
+  .welcome-section {
+    border: 0;
+  }
+}
+
+/* line 49, ../scss/_base.scss */
+.story-list-section {
+  right: 0;
+}
+/* line 52, ../scss/_base.scss */
+.story-list-section.with-user {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* line 59, ../scss/_base.scss */
+.welcome-header {
+  padding: 3rem 0rem;
+  text-align: center;
+}
+/* line 63, ../scss/_base.scss */
+.welcome-header * {
+  margin-bottom: 1rem;
+}
+
+/* line 68, ../scss/_base.scss */
+.welcome-text {
+  text-align: center;
+}
+/* line 71, ../scss/_base.scss */
+.welcome-text * {
+  margin-bottom: 1rem;
+}
+
+/* line 76, ../scss/_base.scss */
+.loading-wrapper {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 1, ../scss/_header.scss */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #DA3D3D;
+  padding: .25rem 0rem;
+  *zoom: 1;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+/* line 22, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.header:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 12, ../scss/_header.scss */
+.logo {
+  font-weight: 900;
+  color: white;
+  float: left;
+  text-transform: uppercase;
+}
+
+/* line 19, ../scss/_header.scss */
+.header-link {
+  float: right;
+  color: #fbe8e8;
+  font-size: .9rem;
+  margin-right: 1rem;
+}
+
+/* line 26, ../scss/_header.scss */
+.dashboard-header {
+  padding: 2rem 0rem;
+  *zoom: 1;
+}
+/* line 22, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.dashboard-header:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 31, ../scss/_header.scss */
+.header-title {
+  float: left;
+}
+
+/* line 36, ../scss/_header.scss */
+.application.with-account .header {
+  -moz-transform: translateY(40px);
+  -ms-transform: translateY(40px);
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+}
+/* line 39, ../scss/_header.scss */
+.application.with-account .arrow {
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 44, ../scss/_header.scss */
+.account {
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  top: -35px;
+  left: 0;
+  background-color: white;
+  color: white;
+}
+/* line 53, ../scss/_header.scss */
+.account .nav-links {
+  padding-top: 0;
+}
+
+/* line 58, ../scss/_header.scss */
+.account-link {
+  float: right;
+  margin-right: 1rem;
+}
+
+/* line 63, ../scss/_header.scss */
+.arrow {
+  display: inline-block;
+  -moz-transform-origin: 50% 55%;
+  -ms-transform-origin: 50% 55%;
+  -webkit-transform-origin: 50% 55%;
+  transform-origin: 50% 55%;
+}
+
+/* line 1, ../scss/_forms.scss */
+.form-wrapper {
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 8, ../scss/_forms.scss */
+.form-control {
+  margin-bottom: .75rem;
+  -moz-transition: all 1000ms ease-out;
+  -o-transition: all 1000ms ease-out;
+  -webkit-transition: all 1000ms ease-out;
+  transition: all 1000ms ease-out;
+}
+/* line 12, ../scss/_forms.scss */
+.form-control.off-page {
+  opacity: 0.0;
+}
+
+/* line 17, ../scss/_forms.scss */
+.text-field, .password-field, .email-field {
+  font-size: 1rem;
+  padding: .5rem .5rem;
+  border: 1px solid #DA3D3D;
+  font-family: "Fauna One", sans-serif;
+  width: 100%;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+/* line 25, ../scss/_forms.scss */
+.text-field:focus, .password-field:focus, .email-field:focus {
+  background-color: #DA3D3D;
+  color: white;
+  outline: none;
+}
+/* line 61, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+.text-field:focus:-moz-placeholder, .password-field:focus:-moz-placeholder, .email-field:focus:-moz-placeholder {
+  color: white;
+}
+/* line 64, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+.text-field:focus::-moz-placeholder, .password-field:focus::-moz-placeholder, .email-field:focus::-moz-placeholder {
+  color: white;
+}
+/* line 67, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+.text-field:focus:-ms-input-placeholder, .password-field:focus:-ms-input-placeholder, .email-field:focus:-ms-input-placeholder {
+  color: white;
+}
+/* line 56, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+.text-field:focus::-webkit-input-placeholder, .password-field:focus::-webkit-input-placeholder, .email-field:focus::-webkit-input-placeholder {
+  color: white;
+}
+/* line 61, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+.text-field:-moz-placeholder, .password-field:-moz-placeholder, .email-field:-moz-placeholder {
+  color: #DA3D3D;
+}
+/* line 64, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+.text-field::-moz-placeholder, .password-field::-moz-placeholder, .email-field::-moz-placeholder {
+  color: #DA3D3D;
+}
+/* line 67, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+.text-field:-ms-input-placeholder, .password-field:-ms-input-placeholder, .email-field:-ms-input-placeholder {
+  color: #DA3D3D;
+}
+/* line 56, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+.text-field::-webkit-input-placeholder, .password-field::-webkit-input-placeholder, .email-field::-webkit-input-placeholder {
+  color: #DA3D3D;
+}
+
+/* line 40, ../scss/_forms.scss */
+.login-form, .register-form {
+  margin-top: 3rem;
+}
+
+/* line 44, ../scss/_forms.scss */
+.forgot-password-form {
+  margin-top: 1rem;
+}
+
+/* line 48, ../scss/_forms.scss */
+.register-link {
+  color: #DA3D3D;
+  text-align: center;
+  display: block;
+}
+
+/* line 54, ../scss/_forms.scss */
+.forgot-password-link {
+  font-size: .8rem;
+  text-align: center;
+  display: block;
+}
+
+/* line 60, ../scss/_forms.scss */
+input[type=submit] {
+  border: 0px;
+  background-color: #bf2525;
+  color: white;
+  width: 100%;
+  padding: .5rem 1rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+/* line 69, ../scss/_forms.scss */
+input[type=submit]:hover {
+  background-color: #951c1c;
+}
+
+/* line 1, ../scss/_errors.scss */
+.errors {
+  top: 38px;
+  position: fixed;
+  width: 100%;
+}
+@media only screen and (max-width: 568px) {
+  /* line 1, ../scss/_errors.scss */
+  .errors {
+    top: 25px;
+  }
+}
+
+/* line 11, ../scss/_errors.scss */
+.error {
+  background-color: white;
+  border-top: 3px solid #DA3D3D;
+  border-bottom: 3px solid #DA3D3D;
+  padding: .25em 0em;
+}
+
+/* line 1, ../scss/_buttons.scss */
+.btn {
+  border: 0;
+  padding: .25em .5em;
+  font-size: .9rem;
+  cursor: pointer;
+  font-family: "Fauna One", sans-serif;
+}
+
+/* line 9, ../scss/_buttons.scss */
+.primary-btn {
+  padding: .5em;
+  background-color: #DA3D3D;
+  color: white;
+  text-align: center;
+}
+
+/* line 16, ../scss/_buttons.scss */
+.create-story-btn {
+  float: right;
+}
+
+/* line 20, ../scss/_buttons.scss */
+.delete-story-btn {
+  float: right;
+}
+
+/* line 24, ../scss/_buttons.scss */
+.read-more-btn {
+  float: right;
+}
+
+/* line 1, ../scss/_stories.scss */
+.user-story {
+  position: relative;
+  background-color: #f2f2f2;
+  margin-bottom: 1.5rem;
+  *zoom: 1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+/* line 22, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.user-story:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 9, ../scss/_stories.scss */
+.user-story.excerpt {
+  margin-top: 1.5rem;
+}
+/* line 12, ../scss/_stories.scss */
+.user-story.excerpt.off-page {
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px);
+  opacity: 0.0;
+}
+/* line 18, ../scss/_stories.scss */
+.user-story.excerpt .story-title {
+  padding: 1rem;
+  font-size: 1.6rem;
+  background-color: #d9d9d9;
+}
+/* line 24, ../scss/_stories.scss */
+.user-story.excerpt .emoji-string {
+  position: relative;
+  background-color: #e6e6e6;
+  padding: 1rem 0rem;
+  text-align: center;
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+/* line 32, ../scss/_stories.scss */
+.user-story.excerpt .story-text {
+  margin-top: 0;
+  border: 0;
+}
+/* line 37, ../scss/_stories.scss */
+.user-story.excerpt .story-author {
+  font-size: .9rem;
+}
+
+/* line 43, ../scss/_stories.scss */
+.story-date {
+  position: absolute;
+  left: -30px;
+  top: 0px;
+  width: 60px;
+  padding: 5px;
+  color: #fbe8e8;
+  font-size: .7rem;
+  text-align: center;
+  background-color: #DA3D3D;
+}
+/* line 54, ../scss/_stories.scss */
+.story-date:after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  border-left: 30px solid transparent;
+  border-top: 20px solid #bf2525;
+}
+@media only screen and (max-width: 568px) {
+  /* line 43, ../scss/_stories.scss */
+  .story-date {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #e6e6e6;
+    color: #DA3D3D;
+  }
+  /* line 72, ../scss/_stories.scss */
+  .story-date:after {
+    display: none;
+  }
+  /* line 76, ../scss/_stories.scss */
+  .story-date p {
+    display: inline-block;
+  }
+}
+
+/* line 82, ../scss/_stories.scss */
+.story-status {
+  width: 100%;
+  position: relative;
+  padding: .5rem;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 5px 5px;
+}
+/* line 88, ../scss/_stories.scss */
+.story-status.published {
+  background-color: #DA3D3D;
+  color: white;
+}
+
+/* line 95, ../scss/_stories.scss */
+.story-link {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 101, ../scss/_stories.scss */
+.story-header {
+  width: 100%;
+  padding: 3rem 0rem;
+  background-color: #f2f2f2;
+}
+
+/* line 107, ../scss/_stories.scss */
+.story-title {
+  font-size: 3rem;
+  font-weight: 400;
+  border: 0;
+  background-color: transparent;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #DA3D3D;
+}
+/* line 117, ../scss/_stories.scss */
+.story-title:focus {
+  outline: none;
+  color: #DA3D3D;
+}
+
+/* line 123, ../scss/_stories.scss */
+.story-author {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* line 128, ../scss/_stories.scss */
+.story-body {
+  padding: 1rem 0rem;
+}
+
+/* line 132, ../scss/_stories.scss */
+.story-wrapper {
+  max-width: 600px;
+}
+
+/* line 136, ../scss/_stories.scss */
+.story-text {
+  margin-top: 7rem;
+  padding: 1rem;
+  background-color: #f2f2f2;
+  font-family: "Fauna One", sans-serif;
+  border: 2px solid #f2f2f2;
+}
+/* line 143, ../scss/_stories.scss */
+.story-text:focus {
+  outline: none;
+  border: 2px solid black;
+}
+
+/* line 150, ../scss/_stories.scss */
+.story-save {
+  padding: 1rem 0rem;
+}
+
+/* line 154, ../scss/_stories.scss */
+.emoji-string {
+  position: absolute;
+  padding: 1rem;
+  width: 100%;
+  top: 0px;
+  background-color: white;
+  -moz-transition: all 300ms ease-out 0ms;
+  -o-transition: all 300ms ease-out 0ms;
+  -webkit-transition: all 300ms ease-out;
+  -webkit-transition-delay: 0ms;
+  transition: all 300ms ease-out 0ms;
+  -moz-transform: translateY(-7rem);
+  -ms-transform: translateY(-7rem);
+  -webkit-transform: translateY(-7rem);
+  transform: translateY(-7rem);
+}
+/* line 163, ../scss/_stories.scss */
+.emoji-string.sticky {
+  text-align: center;
+  position: fixed;
+  left: 0;
+  -moz-transform: translateY(38px);
+  -ms-transform: translateY(38px);
+  -webkit-transform: translateY(38px);
+  transform: translateY(38px);
+}
+@media only screen and (max-width: 568px) {
+  /* line 163, ../scss/_stories.scss */
+  .emoji-string.sticky {
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+}
+
+/* line 175, ../scss/_stories.scss */
+.emoji {
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+/* line 178, ../scss/_stories.scss */
+.emoji.off-page {
+  opacity: 0.0;
+}
+
+/* line 1, ../scss/_modals.scss */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 10, ../scss/_modals.scss */
+.modal-inner {
+  position: absolute;
+  width: 80%;
+  max-width: 400px;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  padding: 2rem;
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+/* line 1, ../scss/_zindex.scss */
+.errors {
+  z-index: 900;
+}
+
+/* line 5, ../scss/_zindex.scss */
+.modal {
+  z-index: 850;
+}
+
+/* line 9, ../scss/_zindex.scss */
+.header {
+  z-index: 800;
+}
+
+/* line 13, ../scss/_zindex.scss */
+.story-date {
+  z-index: 700;
+}

@@ -1,0 +1,10 @@
+<template name="header">
+	<a href="/" class="logo serif">Emojinate</a>
+
+	{{#if currentUser}}
+		<a href="#" class="header-link account-link">{{currentUser.username}} <span class="arrow">&#9652;</span></a>
+		<a href="/dashboard" class="header-link dashboard-link">Dashboard</a>
+	{{else}}
+		<a href="{{pathFor route='login'}}" class="header-link login-link">Login/Register</a>
+	{{/if}}
+</template>

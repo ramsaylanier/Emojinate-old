@@ -1,0 +1,10 @@
+<template name="formField">
+	<div class="form-control off-page">
+	{{#if isTextArea}}
+		<textarea name="{{name}}" class="{{#if classes}}{{classes}}{{/if}} {{type}}-field field" placeholder="{{placeholder}}" value="{{value}}">
+		</textarea> 
+	{{else}}
+		<input type="{{type}}" name="{{name}}" class="{{#if classes}}{{classes}}{{/if}} {{type}}-field field" placeholder="{{placeholder}}" value="{{value}}">
+	{{/if}}
+	</div>
+</template>

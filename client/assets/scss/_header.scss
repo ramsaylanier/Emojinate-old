@@ -1,0 +1,66 @@
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $highlight;
+	padding: .25rem 0rem;
+	@include legacy-pie-clearfix;
+	@include transition(all 300ms ease-out);
+}
+
+.logo{
+	font-weight: 900;
+	color: white;
+	float: left;
+	text-transform: uppercase;
+}
+
+.header-link{
+	float: right;
+	color: lighten($highlight, 40%);
+	font-size: .9rem;
+	margin-right: 1rem;
+}
+
+.dashboard-header{
+	padding: 2rem 0rem;
+	@include legacy-pie-clearfix;
+}
+
+.header-title{
+	float: left;
+}
+
+.application.with-account{
+	.header{
+		@include translateY(40px);
+	}
+	.arrow{
+		@include rotate(180deg);
+	}
+}
+
+.account{
+	position: absolute;
+	width: 100%;
+	height: 35px;
+	top: -35px;
+	left: 0;
+	background-color: white;
+	color: white;
+
+	.nav-links{
+		padding-top: 0;
+	}
+}
+
+.account-link{
+	float: right;
+	margin-right: 1rem;
+}
+
+.arrow{
+	display: inline-block;
+	@include transform-origin(50%, 55%);
+}

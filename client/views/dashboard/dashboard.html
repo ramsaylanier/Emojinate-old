@@ -1,0 +1,50 @@
+<template name="dashboard">
+	<div class="wrapper story-wrapper">
+		<header class="dashboard-header">
+			<h4 class="header-title">Dashboard</h4>
+			<a class="btn primary-btn create-story-btn" href="#">Create Story</a>
+		</header>
+
+		{{#if userStories}}
+			<div class="user-stories">
+				{{#each userStories}}
+					{{>dashboardExcerpt}}
+				{{/each}}
+			</div>
+		{{else}}
+			<p>You have not create any stories.</p>
+		{{/if}}
+	</div>
+</template>	
+
+
+<template name="dashboardExcerpt">
+	<div class="user-story excerpt off-page">
+		<a class="story-link" href="{{pathFor route='storySingle'}}">
+			<p class="story-title">
+				{{{title}}}
+			</p>
+
+			<div class="story-date">
+				<p>{{publishedOnDate}},</p>
+				<p>{{publishedOnYear}}</p>
+			</div>
+
+			<p class="emoji-string">
+				{{#each emojiExcerpt}}
+					<span class="emoji">{{#emojione}}{{this}}{{/emojione}}</span>
+				{{/each}}
+			</p>
+			<p class="story-text">"{{{textExcerpt}}}..."</p>
+			
+			<p class="story-status {{#if published}}published{{/if}}">
+			{{#if published}}
+				Published
+			{{else}}
+				Unpublished
+			{{/if}}
+			</p>
+		</a>
+
+	</div>
+</template>
