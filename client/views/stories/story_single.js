@@ -4,6 +4,10 @@ Template.storySingle.rendered = function(){
 	author = this.data.author;
 	storyId = this.data._id;
 
+	Meteor.defer(function(){
+		$('.story-header').removeClass('off-page');
+	});
+
 	if ($('.emoji-string').length){
 
 		var element = $('.emoji-string');

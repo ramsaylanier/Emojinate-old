@@ -4,7 +4,7 @@
 	margin-bottom: 1.5rem;
 	@include legacy-pie-clearfix;
 	@include border-radius(5px);
-	@include transition(all 300ms ease-out);
+	// @include transition(all 300ms ease-out);
 
 	&.excerpt{
 		margin-top: 1.5rem;
@@ -14,11 +14,32 @@
 			opacity: 0.0;
 		}
 
+		&.active{
+			z-index: 600;
+			background-color: transparent;
+
+			.story-date, .emoji-string, .story-text, .story-status, .read-more-btn{
+				opacity: 0.0;
+			}
+
+			.story-title{
+				font-size: 3rem;
+			}
+
+			.story-header{
+				padding: 3rem;
+				background-color: darken(white, 5%);
+			}
+		}
+
+		.story-header{
+			background-color: darken(white, 15%);
+			padding: .5rem;
+		}
+
 
 	 	.story-title{
-	 		padding: 1rem;
 	 		font-size: 1.6rem;
-	 		background-color: darken(white, 15%);
 	 	}
 
 	 	.emoji-string{
@@ -50,6 +71,7 @@
 	font-size: .7rem;
 	text-align:center;
 	background-color: $highlight;
+	@include transition(all 300ms ease-out);
 
 	&:after{
 		content: '';
@@ -98,10 +120,15 @@
 	width: 100%;
 }
 
-.story-header{
+.story-header, .hero-header{
 	width: 100%;
 	padding: 3rem 0rem;
 	background-color: darken(white, 5%);
+	@include transition(all 300ms ease-out);
+
+	&.off-page{
+		opacity: 0.0;
+	}
 }
 
 .story-title{
@@ -113,6 +140,7 @@
 	text-align: center;
 	text-transform: uppercase;
 	color: $highlight;
+	@include transition(all 300ms ease-out);
 
 	&:focus{
 		outline: none;
@@ -131,10 +159,17 @@
 
 .story-wrapper{
 	max-width: 600px;
+
+	&.story-active{
+		.dashboard-header{
+			@include transition(all 100ms ease-out);
+			opacity: 0.0;
+		}
+	}
 }
 
 .story-text{
-	margin-top: 7rem;
+	margin-top: 4rem;
 	padding: 1rem;
 	background-color: darken(white, 5%);
 	font-family: $sansSerif;
@@ -157,8 +192,9 @@
 	width: 100%;
 	top: 0px;
 	background-color: white;
+	text-align: center;
 	@include transition(all 300ms ease-out 0ms);
-	@include translateY(-7rem);
+	@include translateY(-4rem);
 
 	&.sticky{
 		text-align: center;

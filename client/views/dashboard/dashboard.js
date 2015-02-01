@@ -33,12 +33,46 @@ Template.dashboard.helpers({
 	}
 });
 
+Template.dashboardExcerpt.events({
+	'click .story-link': function(e){
+		e.preventDefault();
+		var stories = $('.user-story');
+		var target = $(e.currentTarget);
+		var url = target.attr('href');
+		var moveAmt = 60;
+
+		_.each(stories, function(story, index){
+			Meteor.setTimeout(function(){
+				$(story).velocity({
+					opacity: 0,
+					translateY: moveAmt
+				});
+			}, 100 * index);
+		});
+
+		$('.dashboard-header').velocity({
+			opacity: 0,
+			translateY: moveAmt
+		})
+
+		Meteor.setTimeout(function(){
+			Router.go(url);
+		}, (110 * stories.length) + 300);
+	}
+})
+
 Template.dashboardExcerpt.helpers({
 	publishedOnDate: function(){
-		return moment(this.publishedOn).format('MMM D');
+		if (this.publishedOn)
+			return moment(this.publishedOn).format('MMM D');
+		else 
+			return moment(this.createdOn).format('MMM D');
 	},
 	publishedOnYear: function(){
-		return moment(this.publishedOn).format('YYYY');
+		if (this.publishedOn)
+			return moment(this.publishedOn).format('YYYY');
+		else 
+			return moment(this.createdOn).format('YYYY');
 	},
 	emojiExcerpt: function(){
 		var emojis = _.first(_.pluck(this.emojis, 'shortname'), 3);

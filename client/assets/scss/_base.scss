@@ -29,6 +29,12 @@ html{
 	height: 100vh;
 	overflow: auto;
 	padding-bottom: 2rem;
+	@include transition(all 300ms ease-out);
+
+	&.off-page{
+		opacity: 0.0;
+		overflow: inherit;
+	}
 
 	@media #{$mobile}{
 		position: relative;

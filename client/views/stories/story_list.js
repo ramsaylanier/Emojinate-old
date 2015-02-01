@@ -18,7 +18,7 @@ Template.storyList.helpers({
 	randomEmojis: function(){
 		var emojis = _.map(_.sample(_.filter(Meteor.emojis(), function(emoji){
 				return _.indexOf(['places', 'other'], emoji.category) == -1; 
-			}), 6), 
+			}), 5), 
 			function(emoji){
 				return {shortname: emoji.shortname, category: emoji.category};
 			});
@@ -28,6 +28,37 @@ Template.storyList.helpers({
 	noUser: function(){
 		if (!Meteor.userId())
 			return true
+	}
+});
+
+
+Template.storyListExcerpt.events({
+	'click .story-link': function(e){
+		e.preventDefault();
+		var stories = $('.user-story');
+		var target = $(e.currentTarget);
+		var url = target.attr('href');
+
+		_.each(stories, function(story, index){
+			Meteor.setTimeout(function(){
+				$(story).velocity({
+					opacity: 0,
+					translateY: 30,
+				});
+			}, 100 * index);
+		});
+
+		$('.welcome-section').velocity({
+			opacity: 0
+		});
+
+		$('.story-list-section').velocity({
+			opacity: 0
+		})
+
+		Meteor.setTimeout(function(){
+			Router.go(url);
+		}, (110 * stories.length) + 300);
 	}
 });
 
@@ -44,11 +75,11 @@ Template.storyListExcerpt.helpers({
 		else 
 			return moment(this.createdOn).format('YYYY');
 	},
-	emojiExcerpt: function(){
-		var emojis = _.first(_.pluck(this.emojis, 'shortname'), 3);
-		return emojis;
-	},
 	textExcerpt: function(){
-		return this.text.substr(0, 140);
+		if (this.text.length > 140){
+			return this.text.substr(0, 140) + '...'
+		} else {
+			return this.text;
+		}
 	}
 })

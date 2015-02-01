@@ -2,7 +2,7 @@
 	<div class="wrapper story-wrapper">
 		<header class="dashboard-header">
 			<h4 class="header-title">Dashboard</h4>
-			<a class="btn primary-btn create-story-btn" href="#">Create Story</a>
+			<a class="btn primary-btn create-story-btn" href="#">Create Emojination</a>
 		</header>
 
 		{{#if userStories}}
@@ -21,9 +21,11 @@
 <template name="dashboardExcerpt">
 	<div class="user-story excerpt off-page">
 		<a class="story-link" href="{{pathFor route='storySingle'}}">
-			<p class="story-title">
-				{{{title}}}
-			</p>
+			<div class="story-header">
+				<p class="story-title">
+					{{{title}}}
+				</p>
+			</div>
 
 			<div class="story-date">
 				<p>{{publishedOnDate}},</p>
