@@ -25,6 +25,11 @@
 				{{> formField type="submit" classes="btn register-btn" value="Register"}}
 			{{else}}
 				{{> formField type="submit" classes="btn login-btn" value="Login"}}
+				
+				<div class="form-control">
+					<a href="#" class="btn twitter-login-link login-btn">Login With Twitter</a>
+				</div>
+
 				<a href="#" class="register-link">No account? Register.</a>
 				<a href="#" class="forgot-password-link">Forgot password?</a>
 			{{/if}}

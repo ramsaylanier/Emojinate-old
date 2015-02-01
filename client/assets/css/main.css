@@ -877,6 +877,15 @@ input[type=submit]:hover {
 }
 
 /* line 28, ../scss/_buttons.scss */
+.twitter-login-link {
+  color: white;
+  background-color: #55acee;
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* line 36, ../scss/_buttons.scss */
 .tweet-btn {
   background-color: #55acee;
   position: absolute;
