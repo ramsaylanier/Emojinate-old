@@ -119,7 +119,7 @@ Template.storySingle.events({
 	'click .tweet-btn': function(e, template){
 		e.preventDefault();
 
-		var text = template.data.text;
+		var text = template.data.text.replace(/&nbsp;/gi,'');
 		var emojis = $('.emoji img');
 		var emojiString = _.pluck(emojis, 'alt').join('');
 		var url = encodeURI(window.location.href);
