@@ -28,8 +28,8 @@
 				</div>
 			{{/if}}
 
-			{{#if author}}
-				<div class="story-save">
+			<div class="story-save">
+				{{#if author}}	
 					{{#if published}}
 						<a href="#" class="btn primary-btn save-story-btn">Save</a>
 						<a href="#" class="btn unpublish-story-btn">Unpublish</a>
@@ -38,8 +38,10 @@
 						<a href="#" class="btn save-story-btn">Save As Draft</a>
 					{{/if}}
 						<a href="#" class="btn primary-btn delete-story-btn">Delete</a>
-				</div>
-			{{/if}}
+				
+				{{/if}}
+			<a href="{{tweet}}" target="_blank" class="btn primary-btn tweet-btn">Tweet</a>
+			</div>
 		</div>
 	</div>
 </template>

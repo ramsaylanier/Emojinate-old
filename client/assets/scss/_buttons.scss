@@ -24,3 +24,11 @@
 .read-more-btn{
 	float: right;
 }
+
+.tweet-btn{
+	background-color: $blue;
+	position: absolute;
+	top: 1rem;
+	left: 50%;
+	@include translateX(-50%);
+}

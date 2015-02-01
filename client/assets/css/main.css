@@ -66,7 +66,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 6, ../scss/_vars.scss */
+/* line 7, ../scss/_vars.scss */
 .purple {
   color: #DA3D3D;
 }
@@ -876,6 +876,18 @@ input[type=submit]:hover {
   float: right;
 }
 
+/* line 28, ../scss/_buttons.scss */
+.tweet-btn {
+  background-color: #55acee;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
 /* line 1, ../scss/_stories.scss */
 .user-story {
   position: relative;
@@ -1099,10 +1111,11 @@ input[type=submit]:hover {
 
 /* line 185, ../scss/_stories.scss */
 .story-save {
+  position: relative;
   padding: 1rem 0rem;
 }
 
-/* line 189, ../scss/_stories.scss */
+/* line 190, ../scss/_stories.scss */
 .emoji-string {
   position: absolute;
   padding: 1rem;
@@ -1120,7 +1133,7 @@ input[type=submit]:hover {
   -webkit-transform: translateY(-4rem);
   transform: translateY(-4rem);
 }
-/* line 199, ../scss/_stories.scss */
+/* line 200, ../scss/_stories.scss */
 .emoji-string.sticky {
   text-align: center;
   position: fixed;
@@ -1131,7 +1144,7 @@ input[type=submit]:hover {
   transform: translateY(38px);
 }
 @media only screen and (max-width: 568px) {
-  /* line 199, ../scss/_stories.scss */
+  /* line 200, ../scss/_stories.scss */
   .emoji-string.sticky {
     -moz-transform: translateY(30px);
     -ms-transform: translateY(30px);
@@ -1140,14 +1153,14 @@ input[type=submit]:hover {
   }
 }
 
-/* line 211, ../scss/_stories.scss */
+/* line 212, ../scss/_stories.scss */
 .emoji {
   -moz-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 214, ../scss/_stories.scss */
+/* line 215, ../scss/_stories.scss */
 .emoji.off-page {
   opacity: 0.0;
 }
