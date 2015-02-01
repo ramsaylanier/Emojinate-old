@@ -31,15 +31,6 @@ Template.storySingle.helpers({
 	},
 	editable: function(type){
 		return '<div class="story-' + type + '" contenteditable="true">' + this[type]+ '</div>'
-	},
-	tweet: function(){
-		var text = this.text;
-		var emojis = $('.emoji img');
-		var emojiString = _.pluck(emojis, 'alt').join('');
-		var url = encodeURI(window.location.href);
-
-		console.log(url);
-		return "https://twitter.com/intent/tweet?text=" + text + ' ' + emojiString + '&url=' + url;
 	}
 })
 
@@ -124,6 +115,16 @@ Template.storySingle.events({
 		} else {
 			throwError('You are not the story Author.');
 		}
+	},
+	'click .tweet-btn': function(e, template){
+		e.preventDefault();
+
+		var text = template.data.text;
+		var emojis = $('.emoji img');
+		var emojiString = _.pluck(emojis, 'alt').join('');
+		var url = encodeURI(window.location.href);
+
+		window.open('https://twitter.com/intent/tweet?text=' + text + ' ' + emojiString + '&url=' + url, '_blank');
 	},
 	'paste .story-text': function(e){
 		// cancel paste
