@@ -33,11 +33,11 @@
 			</div>
 
 			<p class="emoji-string">
-				{{#each emojiExcerpt}}
-					<span class="emoji">{{#emojione}}{{this}}{{/emojione}}</span>
+				{{#each emojis}}
+					<span class="emoji">{{#emojione}}{{this.shortname}}{{/emojione}}</span>
 				{{/each}}
 			</p>
-			<p class="story-text">"{{{textExcerpt}}}..."</p>
+			<p class="story-text">"{{{textExcerpt}}}"</p>
 			
 			<p class="story-status {{#if published}}published{{/if}}">
 			{{#if published}}

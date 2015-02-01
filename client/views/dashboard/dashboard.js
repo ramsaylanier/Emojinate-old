@@ -74,11 +74,11 @@ Template.dashboardExcerpt.helpers({
 		else 
 			return moment(this.createdOn).format('YYYY');
 	},
-	emojiExcerpt: function(){
-		var emojis = _.first(_.pluck(this.emojis, 'shortname'), 3);
-		return emojis;
-	},
 	textExcerpt: function(){
-		return this.text.substr(0, 140);
+		if (this.text.length > 140){
+			return this.text.substr(0, 140) + '...'
+		} else {
+			return this.text;
+		}
 	}
 })
