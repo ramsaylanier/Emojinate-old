@@ -512,40 +512,51 @@ p + .typl8-drop-cap {
 .wrapper {
   position: relative;
   width: 90%;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
+  *zoom: 1;
+}
+/* line 22, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.wrapper:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
 }
 
-/* line 18, ../scss/_base.scss */
+/* line 20, ../scss/_base.scss */
 .main {
   padding-top: 40px;
 }
 @media only screen and (max-width: 568px) {
-  /* line 18, ../scss/_base.scss */
+  /* line 20, ../scss/_base.scss */
   .main {
     padding-top: 30px;
   }
 }
 
-/* line 26, ../scss/_base.scss */
+/* line 28, ../scss/_base.scss */
 .main-section {
   position: fixed;
   width: 50vw;
   height: 100vh;
-  overflow: auto;
+  overflow: scroll;
   padding-bottom: 2rem;
   -moz-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 34, ../scss/_base.scss */
+/* line 36, ../scss/_base.scss */
 .main-section.off-page {
   opacity: 0.0;
   overflow: inherit;
 }
 @media only screen and (max-width: 568px) {
-  /* line 26, ../scss/_base.scss */
+  /* line 28, ../scss/_base.scss */
   .main-section {
     position: relative;
     width: 100%;
@@ -553,49 +564,65 @@ p + .typl8-drop-cap {
   }
 }
 
-/* line 46, ../scss/_base.scss */
+/* line 48, ../scss/_base.scss */
 .welcome-section {
   left: 0;
   border-right: 3px solid #DA3D3D;
 }
 @media only screen and (max-width: 568px) {
-  /* line 46, ../scss/_base.scss */
+  /* line 48, ../scss/_base.scss */
   .welcome-section {
     border: 0;
   }
 }
 
-/* line 55, ../scss/_base.scss */
+/* line 57, ../scss/_base.scss */
+.hero-header {
+  width: 100%;
+  padding: 1rem 0rem;
+  background-color: #f2f2f2;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  text-align: center;
+}
+/* line 64, ../scss/_base.scss */
+.hero-header.off-page {
+  opacity: 0.0;
+}
+
+/* line 69, ../scss/_base.scss */
 .story-list-section {
   right: 0;
 }
-/* line 58, ../scss/_base.scss */
+/* line 72, ../scss/_base.scss */
 .story-list-section.with-user {
   position: relative;
   width: 100%;
   height: auto;
 }
 
-/* line 65, ../scss/_base.scss */
+/* line 79, ../scss/_base.scss */
 .welcome-header {
   padding: 3rem 0rem;
   text-align: center;
 }
-/* line 69, ../scss/_base.scss */
+/* line 83, ../scss/_base.scss */
 .welcome-header * {
   margin-bottom: 1rem;
 }
 
-/* line 74, ../scss/_base.scss */
+/* line 88, ../scss/_base.scss */
 .welcome-text {
   text-align: center;
 }
-/* line 77, ../scss/_base.scss */
+/* line 91, ../scss/_base.scss */
 .welcome-text * {
   margin-bottom: 1rem;
 }
 
-/* line 82, ../scss/_base.scss */
+/* line 96, ../scss/_base.scss */
 .loading-wrapper {
   position: absolute;
   top: 50%;
@@ -613,8 +640,9 @@ p + .typl8-drop-cap {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #DA3D3D;
-  padding: .25rem 0rem;
+  height: 40px;
+  border-bottom: 3px solid #DA3D3D;
+  background-color: white;
   *zoom: 1;
   -moz-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
@@ -631,23 +659,29 @@ p + .typl8-drop-cap {
   visibility: hidden;
 }
 
-/* line 12, ../scss/_header.scss */
+/* line 13, ../scss/_header.scss */
 .logo {
-  font-weight: 900;
-  color: white;
-  float: left;
-  text-transform: uppercase;
+  height: 40px;
+  top: 0;
+  position: absolute;
+  display: block;
+  padding: 5px;
+}
+/* line 20, ../scss/_header.scss */
+.logo img {
+  height: 100%;
 }
 
-/* line 19, ../scss/_header.scss */
+/* line 25, ../scss/_header.scss */
 .header-link {
   float: right;
-  color: #fbe8e8;
+  color: #DA3D3D;
   font-size: .9rem;
+  line-height: 2rem;
   margin-right: 1rem;
 }
 
-/* line 26, ../scss/_header.scss */
+/* line 33, ../scss/_header.scss */
 .dashboard-header {
   padding: 2rem 0rem;
   *zoom: 1;
@@ -662,19 +696,19 @@ p + .typl8-drop-cap {
   visibility: hidden;
 }
 
-/* line 31, ../scss/_header.scss */
+/* line 38, ../scss/_header.scss */
 .header-title {
   float: left;
 }
 
-/* line 36, ../scss/_header.scss */
+/* line 43, ../scss/_header.scss */
 .application.with-account .header {
   -moz-transform: translateY(40px);
   -ms-transform: translateY(40px);
   -webkit-transform: translateY(40px);
   transform: translateY(40px);
 }
-/* line 39, ../scss/_header.scss */
+/* line 46, ../scss/_header.scss */
 .application.with-account .arrow {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -682,28 +716,33 @@ p + .typl8-drop-cap {
   transform: rotate(180deg);
 }
 
-/* line 44, ../scss/_header.scss */
+/* line 51, ../scss/_header.scss */
 .account {
   position: absolute;
   width: 100%;
-  height: 35px;
-  top: -35px;
+  height: 40px;
+  top: -40px;
   left: 0;
-  background-color: white;
-  color: white;
+  background-color: #DA3D3D;
 }
-/* line 53, ../scss/_header.scss */
+/* line 59, ../scss/_header.scss */
 .account .nav-links {
   padding-top: 0;
 }
 
-/* line 58, ../scss/_header.scss */
+/* line 65, ../scss/_header.scss */
+.account-links a {
+  line-height: 1.8rem;
+  color: white;
+}
+
+/* line 71, ../scss/_header.scss */
 .account-link {
   float: right;
   margin-right: 1rem;
 }
 
-/* line 63, ../scss/_header.scss */
+/* line 76, ../scss/_header.scss */
 .arrow {
   display: inline-block;
   -moz-transform-origin: 50% 55%;
@@ -838,10 +877,9 @@ input[type=submit]:hover {
 
 /* line 11, ../scss/_errors.scss */
 .error {
-  background-color: white;
-  border-top: 3px solid #DA3D3D;
-  border-bottom: 3px solid #DA3D3D;
+  background-color: #DA3D3D;
   padding: .25em 0em;
+  color: white;
 }
 
 /* line 1, ../scss/_buttons.scss */
@@ -877,19 +915,34 @@ input[type=submit]:hover {
 }
 
 /* line 28, ../scss/_buttons.scss */
-.twitter-login-link {
-  color: white;
-  background-color: #55acee;
-  display: block;
-  text-align: center;
-  font-size: 1.2rem;
+.twitter-icon {
+  width: 25px;
+  height: 25px;
+  float: left;
+  margin-right: 10px;
+  padding-top: 3px;
 }
 
 /* line 36, ../scss/_buttons.scss */
+.twitter-login-link {
+  color: white;
+  background-color: #55acee;
+  text-align: center;
+  font-size: .8rem;
+  line-height: 1.6rem;
+  padding: .25rem .5rem;
+  height: 40px;
+  width: 190px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: 3px solid #147bc9;
+}
+
+/* line 50, ../scss/_buttons.scss */
 .tweet-btn {
   background-color: #55acee;
   position: absolute;
-  top: 1rem;
+  bottom: 0rem;
   left: 50%;
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -1045,7 +1098,8 @@ input[type=submit]:hover {
 }
 
 /* line 123, ../scss/_stories.scss */
-.story-header, .hero-header {
+.story-header {
+  position: relative;
   width: 100%;
   padding: 3rem 0rem;
   background-color: #f2f2f2;
@@ -1054,12 +1108,12 @@ input[type=submit]:hover {
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 129, ../scss/_stories.scss */
-.story-header.off-page, .hero-header.off-page {
+/* line 130, ../scss/_stories.scss */
+.story-header.off-page {
   opacity: 0.0;
 }
 
-/* line 134, ../scss/_stories.scss */
+/* line 135, ../scss/_stories.scss */
 .story-title {
   font-size: 3rem;
   font-weight: 400;
@@ -1074,28 +1128,28 @@ input[type=submit]:hover {
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 145, ../scss/_stories.scss */
+/* line 146, ../scss/_stories.scss */
 .story-title:focus {
   outline: none;
   color: #DA3D3D;
 }
 
-/* line 151, ../scss/_stories.scss */
+/* line 152, ../scss/_stories.scss */
 .story-author {
   font-size: 1.2rem;
   text-align: center;
 }
 
-/* line 156, ../scss/_stories.scss */
+/* line 157, ../scss/_stories.scss */
 .story-body {
   padding: 1rem 0rem;
 }
 
-/* line 160, ../scss/_stories.scss */
+/* line 161, ../scss/_stories.scss */
 .story-wrapper {
   max-width: 600px;
 }
-/* line 164, ../scss/_stories.scss */
+/* line 165, ../scss/_stories.scss */
 .story-wrapper.story-active .dashboard-header {
   -moz-transition: all 100ms ease-out;
   -o-transition: all 100ms ease-out;
@@ -1104,7 +1158,7 @@ input[type=submit]:hover {
   opacity: 0.0;
 }
 
-/* line 171, ../scss/_stories.scss */
+/* line 172, ../scss/_stories.scss */
 .story-text {
   margin-top: 4rem;
   padding: 1rem;
@@ -1112,19 +1166,19 @@ input[type=submit]:hover {
   font-family: "Fauna One", sans-serif;
   border: 2px solid #f2f2f2;
 }
-/* line 178, ../scss/_stories.scss */
+/* line 179, ../scss/_stories.scss */
 .story-text:focus {
   outline: none;
   border: 2px solid black;
 }
 
-/* line 185, ../scss/_stories.scss */
+/* line 186, ../scss/_stories.scss */
 .story-save {
   position: relative;
   padding: 1rem 0rem;
 }
 
-/* line 190, ../scss/_stories.scss */
+/* line 191, ../scss/_stories.scss */
 .emoji-string {
   position: absolute;
   padding: 1rem;
@@ -1142,7 +1196,7 @@ input[type=submit]:hover {
   -webkit-transform: translateY(-4rem);
   transform: translateY(-4rem);
 }
-/* line 200, ../scss/_stories.scss */
+/* line 201, ../scss/_stories.scss */
 .emoji-string.sticky {
   text-align: center;
   position: fixed;
@@ -1153,7 +1207,7 @@ input[type=submit]:hover {
   transform: translateY(38px);
 }
 @media only screen and (max-width: 568px) {
-  /* line 200, ../scss/_stories.scss */
+  /* line 201, ../scss/_stories.scss */
   .emoji-string.sticky {
     -moz-transform: translateY(30px);
     -ms-transform: translateY(30px);
@@ -1162,14 +1216,14 @@ input[type=submit]:hover {
   }
 }
 
-/* line 212, ../scss/_stories.scss */
+/* line 213, ../scss/_stories.scss */
 .emoji {
   -moz-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 215, ../scss/_stories.scss */
+/* line 216, ../scss/_stories.scss */
 .emoji.off-page {
   opacity: 0.0;
 }

@@ -1,6 +1,5 @@
 <template name="storySingle">
 	<div class="story-header off-page">
-		<div class="wrapper">
 			{{#if author}}
 				{{{editable "title"}}}
 			{{else}}
@@ -9,7 +8,7 @@
 				</div>
 			{{/if}}
 			<p class="story-title story-author">- by {{authorName}}</p>
-		</div>
+		<a href="#" target="_blank" class="btn primary-btn tweet-btn">{{>twitterIcon}} Tweet This</a>
 	</div>
 
 	<div class="story-body">
@@ -40,7 +39,6 @@
 						<a href="#" class="btn primary-btn delete-story-btn">Delete</a>
 				
 				{{/if}}
-			<a href="#" target="_blank" class="btn primary-btn tweet-btn">Tweet</a>
 			</div>
 		</div>
 	</div>

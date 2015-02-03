@@ -4,7 +4,7 @@
 	<section class="welcome-section main-section">
 		<div class="wrapper">
 			<header class="welcome-header">
-				<h2 class="welcome-title">Welcome To Emojinate</h2>
+				<h2 class="welcome-title strong">Welcome To Emojinate</h2>
 				<p>Where emojinations run wild</p>
 				<p class="random-emojis">
 					{{#each randomEmojis}}
@@ -16,7 +16,8 @@
 			<div class="welcome-text">
 				<div class="wrapper story-wrapper">
 					<p>Emojinate is a story/blogging platform that gives you a string of 5 random emojis that you craft a musing around. Start by reading a couple examples.</p>
-					<p>If you like what you see, then <a class="get-started-link strong" href="/login">get started!</a></p>
+					<p>If you like what you see, then</p>
+					<a href="#" class="btn twitter-login-link">{{>twitterIcon}}Login With Twitter</a>
 				</div>
 			</div>
 		</div>
@@ -27,7 +28,7 @@
 
 		<header class="hero-header">
 			<div class="wrapper story-wrapper">
-				<h3 class="story-title strong">Recent Emojinations</h3>
+				<h4 class="hero-title strong">Recent Emojinations</h4>
 			</div>
 		</header>
 

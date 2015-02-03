@@ -4,7 +4,8 @@ Accounts.config(function(){
 
 Accounts.onCreateUser(function(options, user){
 	if (options.profile)
-		user.username = options.profile.name;
+		console.log(user);
+		user.username = user.services.twitter.screenName;
 
 	return user;
 })

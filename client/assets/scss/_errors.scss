@@ -9,8 +9,7 @@
 }
 
 .error{
-	background-color: white;
-	border-top: 3px solid $highlight;
-	border-bottom: 3px solid $highlight;
+	background-color: $highlight;
 	padding: .25em 0em;
+	color: white;
 }

@@ -3,23 +3,30 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: $highlight;
-	padding: .25rem 0rem;
+	height: 40px;
+	border-bottom: 3px solid $highlight;
+	background-color: white;
 	@include legacy-pie-clearfix;
 	@include transition(all 300ms ease-out);
 }
 
 .logo{
-	font-weight: 900;
-	color: white;
-	float: left;
-	text-transform: uppercase;
+	height: 40px;
+	top: 0;
+	position: absolute;
+	display: block;
+	padding: 5px;
+
+	img{
+		height: 100%;
+	}
 }
 
 .header-link{
 	float: right;
-	color: lighten($highlight, 40%);
+	color: $highlight;
 	font-size: .9rem;
+	line-height: 2rem;
 	margin-right: 1rem;
 }
 
@@ -44,14 +51,20 @@
 .account{
 	position: absolute;
 	width: 100%;
-	height: 35px;
-	top: -35px;
+	height: 40px;
+	top: -40px;
 	left: 0;
-	background-color: white;
-	color: white;
+	background-color: $highlight;
 
 	.nav-links{
 		padding-top: 0;
+	}
+}
+
+.account-links{
+	a{
+		line-height: 1.8rem;
+		color: white;
 	}
 }
 

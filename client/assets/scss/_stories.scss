@@ -120,7 +120,8 @@
 	width: 100%;
 }
 
-.story-header, .hero-header{
+.story-header{
+	position: relative;
 	width: 100%;
 	padding: 3rem 0rem;
 	background-color: darken(white, 5%);

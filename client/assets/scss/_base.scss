@@ -11,8 +11,10 @@ html{
 .wrapper{
 	position: relative;
 	width: 90%;
+	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	@include legacy-pie-clearfix;
 }
 
 .main{
@@ -27,7 +29,7 @@ html{
 	position: fixed;
 	width: 50vw;
 	height: 100vh;
-	overflow: auto;
+	overflow: scroll;
 	padding-bottom: 2rem;
 	@include transition(all 300ms ease-out);
 
@@ -49,6 +51,18 @@ html{
 
 	@media #{$mobile}{
 		border: 0;
+	}
+}
+
+.hero-header{
+	width: 100%;
+	padding: 1rem 0rem;
+	background-color: darken(white, 5%);
+	@include transition(all 300ms ease-out);
+	text-align: center;
+
+	&.off-page{
+		opacity: 0.0;
 	}
 }
 
