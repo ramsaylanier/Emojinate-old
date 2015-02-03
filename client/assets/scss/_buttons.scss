@@ -54,3 +54,8 @@
 	left: 50%;
 	@include translateX(-50%);
 }
+
+.regenerate-btn{
+	text-align: center;
+	display: block;
+}

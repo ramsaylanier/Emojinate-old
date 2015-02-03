@@ -17,7 +17,16 @@
 				{{#each emojis}}
 					<span class="emoji">{{#emojione}}{{shortname}}{{/emojione}}</span>
 				{{/each}}
+				<br>
 			</div>
+
+			{{#if author}}
+				{{#unless published}}
+				<a href="#" class="btn regenerate-btn">Give me new emojis, plz. </a>
+				{{/unless}}
+			{{/if}}
+
+
 			
 			{{#if author}}
 				{{{editable "text"}}}

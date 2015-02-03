@@ -950,6 +950,12 @@ input[type=submit]:hover {
   transform: translateX(-50%);
 }
 
+/* line 58, ../scss/_buttons.scss */
+.regenerate-btn {
+  text-align: center;
+  display: block;
+}
+
 /* line 1, ../scss/_stories.scss */
 .user-story {
   position: relative;
@@ -1160,7 +1166,7 @@ input[type=submit]:hover {
 
 /* line 172, ../scss/_stories.scss */
 .story-text {
-  margin-top: 4rem;
+  margin-top: 1rem;
   padding: 1rem;
   background-color: #f2f2f2;
   font-family: "Fauna One", sans-serif;
@@ -1180,10 +1186,9 @@ input[type=submit]:hover {
 
 /* line 191, ../scss/_stories.scss */
 .emoji-string {
-  position: absolute;
+  position: relative;
   padding: 1rem;
   width: 100%;
-  top: 0px;
   background-color: white;
   text-align: center;
   -moz-transition: all 300ms ease-out 0ms;
@@ -1191,39 +1196,16 @@ input[type=submit]:hover {
   -webkit-transition: all 300ms ease-out;
   -webkit-transition-delay: 0ms;
   transition: all 300ms ease-out 0ms;
-  -moz-transform: translateY(-4rem);
-  -ms-transform: translateY(-4rem);
-  -webkit-transform: translateY(-4rem);
-  transform: translateY(-4rem);
-}
-/* line 201, ../scss/_stories.scss */
-.emoji-string.sticky {
-  text-align: center;
-  position: fixed;
-  left: 0;
-  -moz-transform: translateY(38px);
-  -ms-transform: translateY(38px);
-  -webkit-transform: translateY(38px);
-  transform: translateY(38px);
-}
-@media only screen and (max-width: 568px) {
-  /* line 201, ../scss/_stories.scss */
-  .emoji-string.sticky {
-    -moz-transform: translateY(30px);
-    -ms-transform: translateY(30px);
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
-  }
 }
 
-/* line 213, ../scss/_stories.scss */
+/* line 200, ../scss/_stories.scss */
 .emoji {
   -moz-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 216, ../scss/_stories.scss */
+/* line 203, ../scss/_stories.scss */
 .emoji.off-page {
   opacity: 0.0;
 }

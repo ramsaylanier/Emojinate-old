@@ -7,21 +7,6 @@ Template.storySingle.rendered = function(){
 	Meteor.defer(function(){
 		$('.story-header').removeClass('off-page');
 	});
-
-	if ($('.emoji-string').length){
-
-		var element = $('.emoji-string');
-		var target = element.offset().top + element.outerHeight();
-
-		$(window).on('scroll', function(){
-			var pos = $(window).scrollTop();
-
-			if (pos > target)
-				element.addClass('sticky');
-			else 
-				element.removeClass('sticky');
-		})
-	}
 }
 
 Template.storySingle.helpers({
@@ -49,6 +34,16 @@ function getStoryFields(){
 }
 
 Template.storySingle.events({
+	'click .regenerate-btn': function(e, template){
+		e.preventDefault();
+
+		if (authorize(template)){
+			Meteor.call('insertEmojis', storyId, author, function(error){
+				if(error)
+					throwError(error.reason, 'error')
+			})
+		}
+	},
 	'click .publish-story-btn': function(e, template){
 		e.preventDefault();
 

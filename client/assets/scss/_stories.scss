@@ -170,7 +170,7 @@
 }
 
 .story-text{
-	margin-top: 4rem;
+	margin-top: 1rem;
 	padding: 1rem;
 	background-color: darken(white, 5%);
 	font-family: $sansSerif;
@@ -189,25 +189,12 @@
 }
 
 .emoji-string{
-	position: absolute;
+	position: relative;
 	padding: 1rem;
 	width: 100%;
-	top: 0px;
 	background-color: white;
 	text-align: center;
 	@include transition(all 300ms ease-out 0ms);
-	@include translateY(-4rem);
-
-	&.sticky{
-		text-align: center;
-		position: fixed;
-		left: 0;
-		@include translateY(38px);
-
-		@media #{$mobile}{
-			@include translateY(30px);
-		}
-	}
 }
 
 .emoji{
