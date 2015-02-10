@@ -504,11 +504,16 @@ p + .typl8-drop-cap {
 @media only screen and (max-width: 568px) {
   /* line 5, ../scss/_base.scss */
   html {
-    font-size: 80%;
+    font-size: 90%;
   }
 }
 
 /* line 11, ../scss/_base.scss */
+.application {
+  padding-bottom: 2rem;
+}
+
+/* line 15, ../scss/_base.scss */
 .wrapper {
   position: relative;
   width: 90%;
@@ -527,18 +532,18 @@ p + .typl8-drop-cap {
   visibility: hidden;
 }
 
-/* line 20, ../scss/_base.scss */
+/* line 24, ../scss/_base.scss */
 .main {
   padding-top: 40px;
 }
 @media only screen and (max-width: 568px) {
-  /* line 20, ../scss/_base.scss */
+  /* line 24, ../scss/_base.scss */
   .main {
     padding-top: 30px;
   }
 }
 
-/* line 28, ../scss/_base.scss */
+/* line 32, ../scss/_base.scss */
 .main-section {
   position: fixed;
   width: 50vw;
@@ -550,13 +555,13 @@ p + .typl8-drop-cap {
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 36, ../scss/_base.scss */
+/* line 40, ../scss/_base.scss */
 .main-section.off-page {
   opacity: 0.0;
   overflow: inherit;
 }
 @media only screen and (max-width: 568px) {
-  /* line 28, ../scss/_base.scss */
+  /* line 32, ../scss/_base.scss */
   .main-section {
     position: relative;
     width: 100%;
@@ -564,19 +569,19 @@ p + .typl8-drop-cap {
   }
 }
 
-/* line 48, ../scss/_base.scss */
+/* line 52, ../scss/_base.scss */
 .welcome-section {
   left: 0;
   border-right: 3px solid #DA3D3D;
 }
 @media only screen and (max-width: 568px) {
-  /* line 48, ../scss/_base.scss */
+  /* line 52, ../scss/_base.scss */
   .welcome-section {
     border: 0;
   }
 }
 
-/* line 57, ../scss/_base.scss */
+/* line 61, ../scss/_base.scss */
 .hero-header {
   width: 100%;
   padding: 1rem 0rem;
@@ -587,42 +592,42 @@ p + .typl8-drop-cap {
   transition: all 300ms ease-out;
   text-align: center;
 }
-/* line 64, ../scss/_base.scss */
+/* line 68, ../scss/_base.scss */
 .hero-header.off-page {
   opacity: 0.0;
 }
 
-/* line 69, ../scss/_base.scss */
+/* line 73, ../scss/_base.scss */
 .story-list-section {
   right: 0;
 }
-/* line 72, ../scss/_base.scss */
+/* line 76, ../scss/_base.scss */
 .story-list-section.with-user {
   position: relative;
   width: 100%;
   height: auto;
 }
 
-/* line 79, ../scss/_base.scss */
+/* line 83, ../scss/_base.scss */
 .welcome-header {
   padding: 3rem 0rem;
   text-align: center;
 }
-/* line 83, ../scss/_base.scss */
+/* line 87, ../scss/_base.scss */
 .welcome-header * {
   margin-bottom: 1rem;
 }
 
-/* line 88, ../scss/_base.scss */
+/* line 92, ../scss/_base.scss */
 .welcome-text {
   text-align: center;
 }
-/* line 91, ../scss/_base.scss */
+/* line 95, ../scss/_base.scss */
 .welcome-text * {
   margin-bottom: 1rem;
 }
 
-/* line 96, ../scss/_base.scss */
+/* line 100, ../scss/_base.scss */
 .loading-wrapper {
   position: absolute;
   top: 50%;
@@ -632,6 +637,38 @@ p + .typl8-drop-cap {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+/* line 108, ../scss/_base.scss */
+.about-section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  -moz-transform: translateY(200px);
+  -ms-transform: translateY(200px);
+  -webkit-transform: translateY(200px);
+  transform: translateY(200px);
+  background-color: #DA3D3D;
+  padding: .5rem 3rem;
+  text-align: center;
+  color: white;
+}
+/* line 120, ../scss/_base.scss */
+.about-section a {
+  color: #6a1414;
+  font-weight: 700;
+}
+/* line 125, ../scss/_base.scss */
+.about-section.active {
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
 }
 
 /* line 1, ../scss/_header.scss */
@@ -658,8 +695,14 @@ p + .typl8-drop-cap {
   overflow: hidden;
   visibility: hidden;
 }
+@media only screen and (max-width: 568px) {
+  /* line 1, ../scss/_header.scss */
+  .header {
+    height: 30px;
+  }
+}
 
-/* line 13, ../scss/_header.scss */
+/* line 17, ../scss/_header.scss */
 .logo {
   height: 40px;
   top: 0;
@@ -667,12 +710,18 @@ p + .typl8-drop-cap {
   display: block;
   padding: 5px;
 }
-/* line 20, ../scss/_header.scss */
+@media only screen and (max-width: 568px) {
+  /* line 17, ../scss/_header.scss */
+  .logo {
+    height: 30px;
+  }
+}
+/* line 28, ../scss/_header.scss */
 .logo img {
   height: 100%;
 }
 
-/* line 25, ../scss/_header.scss */
+/* line 33, ../scss/_header.scss */
 .header-link {
   float: right;
   color: #DA3D3D;
@@ -681,7 +730,7 @@ p + .typl8-drop-cap {
   margin-right: 1rem;
 }
 
-/* line 33, ../scss/_header.scss */
+/* line 41, ../scss/_header.scss */
 .dashboard-header {
   padding: 2rem 0rem;
   *zoom: 1;
@@ -696,19 +745,19 @@ p + .typl8-drop-cap {
   visibility: hidden;
 }
 
-/* line 38, ../scss/_header.scss */
+/* line 46, ../scss/_header.scss */
 .header-title {
   float: left;
 }
 
-/* line 43, ../scss/_header.scss */
+/* line 51, ../scss/_header.scss */
 .application.with-account .header {
   -moz-transform: translateY(40px);
   -ms-transform: translateY(40px);
   -webkit-transform: translateY(40px);
   transform: translateY(40px);
 }
-/* line 46, ../scss/_header.scss */
+/* line 54, ../scss/_header.scss */
 .application.with-account .arrow {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -716,7 +765,7 @@ p + .typl8-drop-cap {
   transform: rotate(180deg);
 }
 
-/* line 51, ../scss/_header.scss */
+/* line 59, ../scss/_header.scss */
 .account {
   position: absolute;
   width: 100%;
@@ -725,24 +774,24 @@ p + .typl8-drop-cap {
   left: 0;
   background-color: #DA3D3D;
 }
-/* line 59, ../scss/_header.scss */
+/* line 67, ../scss/_header.scss */
 .account .nav-links {
   padding-top: 0;
 }
 
-/* line 65, ../scss/_header.scss */
+/* line 73, ../scss/_header.scss */
 .account-links a {
   line-height: 1.8rem;
   color: white;
 }
 
-/* line 71, ../scss/_header.scss */
+/* line 79, ../scss/_header.scss */
 .account-link {
   float: right;
   margin-right: 1rem;
 }
 
-/* line 76, ../scss/_header.scss */
+/* line 84, ../scss/_header.scss */
 .arrow {
   display: inline-block;
   -moz-transform-origin: 50% 55%;
@@ -916,14 +965,23 @@ input[type=submit]:hover {
 
 /* line 28, ../scss/_buttons.scss */
 .twitter-icon {
+  position: relative;
   width: 25px;
   height: 25px;
   float: left;
   margin-right: 10px;
   padding-top: 3px;
 }
+@media only screen and (max-width: 568px) {
+  /* line 28, ../scss/_buttons.scss */
+  .twitter-icon {
+    height: 20px;
+    width: 20px;
+    top: 2px;
+  }
+}
 
-/* line 36, ../scss/_buttons.scss */
+/* line 43, ../scss/_buttons.scss */
 .twitter-login-link {
   color: white;
   background-color: #55acee;
@@ -932,13 +990,21 @@ input[type=submit]:hover {
   line-height: 1.6rem;
   padding: .25rem .5rem;
   height: 40px;
-  width: 190px;
+  width: 100px;
   display: block;
   margin: 0 auto;
   border-bottom: 3px solid #147bc9;
 }
+@media only screen and (max-width: 568px) {
+  /* line 43, ../scss/_buttons.scss */
+  .twitter-login-link {
+    height: 30px;
+    line-height: 1.3rem;
+    width: 80px;
+  }
+}
 
-/* line 50, ../scss/_buttons.scss */
+/* line 63, ../scss/_buttons.scss */
 .tweet-btn {
   background-color: #55acee;
   position: absolute;
@@ -950,10 +1016,30 @@ input[type=submit]:hover {
   transform: translateX(-50%);
 }
 
-/* line 58, ../scss/_buttons.scss */
+/* line 71, ../scss/_buttons.scss */
 .regenerate-btn {
   text-align: center;
   display: block;
+}
+
+/* line 76, ../scss/_buttons.scss */
+.about-btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 82, ../scss/_buttons.scss */
+.close-btn {
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  color: white;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 /* line 1, ../scss/_stories.scss */
@@ -1245,7 +1331,7 @@ input[type=submit]:hover {
 }
 
 /* line 9, ../scss/_zindex.scss */
-.header {
+.header, .about-btn, .about-section {
   z-index: 800;
 }
 

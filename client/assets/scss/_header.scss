@@ -8,6 +8,10 @@
 	background-color: white;
 	@include legacy-pie-clearfix;
 	@include transition(all 300ms ease-out);
+
+	@media #{$mobile}{
+		height: 30px;
+	}
 }
 
 .logo{
@@ -16,6 +20,10 @@
 	position: absolute;
 	display: block;
 	padding: 5px;
+
+	@media #{$mobile}{
+		height: 30px;
+	}
 
 	img{
 		height: 100%;

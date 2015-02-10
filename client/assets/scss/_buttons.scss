@@ -26,11 +26,18 @@
 }
 
 .twitter-icon{
+	position: relative;
 	width: 25px;
 	height: 25px;
 	float: left;
 	margin-right: 10px;
 	padding-top: 3px;
+
+	@media #{$mobile}{
+		height: 20px;
+		width: 20px;
+		top: 2px;
+	}
 }
 
 .twitter-login-link{
@@ -41,10 +48,16 @@
 	line-height: 1.6rem;
 	padding: .25rem .5rem;
 	height: 40px;
-	width: 190px;
+	width: 100px;
 	display: block;
 	margin: 0 auto;
 	border-bottom: 3px solid darken($blue, 20%);
+
+	@media #{$mobile}{
+		height: 30px;
+		line-height: 1.3rem;
+		width: 80px;
+	}
 }
 
 .tweet-btn{
@@ -58,4 +71,19 @@
 .regenerate-btn{
 	text-align: center;
 	display: block;
+}
+
+.about-btn{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.close-btn{
+	position: absolute;
+	right: 0;
+	background-color: transparent;
+	color: white;
+	top: 50%;
+	@include translateY(-50%);
 }

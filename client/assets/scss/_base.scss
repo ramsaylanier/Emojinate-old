@@ -4,8 +4,12 @@
 
 html{
 	@media #{$mobile}{
-		font-size: 80%;
+		font-size: 90%;
 	}
+}
+
+.application{
+	padding-bottom: 2rem;
 }
 
 .wrapper{
@@ -99,4 +103,26 @@ html{
 	width: 100%;
 	text-align: center;
 	@include translateY(-50%);
+}
+
+.about-section{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	@include transition(all 300ms ease-out);
+	@include translateY(200px);
+	background-color: $highlight;
+	padding: .5rem 3rem;
+	text-align: center;
+	color: white;
+
+	a{
+		color: darken($highlight, 30%);
+		font-weight: 700;
+	}
+
+	&.active{
+		@include translateY(0px);
+	}
 }

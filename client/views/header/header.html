@@ -1,10 +1,14 @@
 <template name="header">
+	{{#if isPhone}}
+	<a href="/" class="logo"><img src="small-logo.png"/></a>
+	{{else}}
 	<a href="/" class="logo"><img src="logo.png"/></a>
+	{{/if}}
 
 	{{#if currentUser}}
 		<a href="#" class="header-link account-link">{{currentUser.username}} <span class="arrow">&#9652;</span></a>
 		<a href="/dashboard" class="header-link dashboard-link">Dashboard</a>
 	{{else}}
-		<a href="#" class="btn header-link twitter-login-link">{{>twitterIcon}}Login With Twitter</a>
+		<a href="#" class="btn header-link twitter-login-link">{{>twitterIcon}}Login</a>
 	{{/if}}
 </template>
