@@ -4,7 +4,7 @@
 	margin-bottom: 1.5rem;
 	@include legacy-pie-clearfix;
 	@include border-radius(5px);
-	// @include transition(all 300ms ease-out);
+	@include transition(all 300ms ease-out);
 
 	&.excerpt{
 		margin-top: 1.5rem;

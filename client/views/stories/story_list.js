@@ -1,10 +1,12 @@
 Template.storyList.rendered = function(){
 	var excerpts = $('.user-story');
 
-	_.each(excerpts, function(excerpt, index){
-		Meteor.setTimeout(function(){
-			$(excerpt).removeClass('off-page');
-		}, 100 * index);
+	Meteor.defer(function(){
+		_.each(excerpts, function(excerpt, index){
+			Meteor.setTimeout(function(){
+				$(excerpt).removeClass('off-page');
+			}, 100 * index);
+		})
 	})
 }
 

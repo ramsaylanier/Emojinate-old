@@ -671,6 +671,11 @@ p + .typl8-drop-cap {
   transform: translateY(0px);
 }
 
+/* line 132, ../scss/_base.scss */
+.t-a-center {
+  text-align: center;
+}
+
 /* line 1, ../scss/_header.scss */
 .header {
   position: fixed;
@@ -950,20 +955,35 @@ input[type=submit]:hover {
 
 /* line 16, ../scss/_buttons.scss */
 .create-story-btn {
-  float: right;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  display: block;
+  border-bottom: 5px solid #bf2525;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+/* line 23, ../scss/_buttons.scss */
+.create-story-btn:hover {
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  border-bottom: 10px solid #bf2525;
 }
 
-/* line 20, ../scss/_buttons.scss */
+/* line 29, ../scss/_buttons.scss */
 .delete-story-btn {
   float: right;
 }
 
-/* line 24, ../scss/_buttons.scss */
+/* line 33, ../scss/_buttons.scss */
 .read-more-btn {
   float: right;
 }
 
-/* line 28, ../scss/_buttons.scss */
+/* line 37, ../scss/_buttons.scss */
 .twitter-icon {
   position: relative;
   width: 25px;
@@ -973,7 +993,7 @@ input[type=submit]:hover {
   padding-top: 3px;
 }
 @media only screen and (max-width: 568px) {
-  /* line 28, ../scss/_buttons.scss */
+  /* line 37, ../scss/_buttons.scss */
   .twitter-icon {
     height: 20px;
     width: 20px;
@@ -981,7 +1001,7 @@ input[type=submit]:hover {
   }
 }
 
-/* line 43, ../scss/_buttons.scss */
+/* line 52, ../scss/_buttons.scss */
 .twitter-login-link {
   color: white;
   background-color: #55acee;
@@ -996,7 +1016,7 @@ input[type=submit]:hover {
   border-bottom: 3px solid #147bc9;
 }
 @media only screen and (max-width: 568px) {
-  /* line 43, ../scss/_buttons.scss */
+  /* line 52, ../scss/_buttons.scss */
   .twitter-login-link {
     height: 30px;
     line-height: 1.3rem;
@@ -1004,7 +1024,7 @@ input[type=submit]:hover {
   }
 }
 
-/* line 63, ../scss/_buttons.scss */
+/* line 72, ../scss/_buttons.scss */
 .tweet-btn {
   background-color: #55acee;
   position: absolute;
@@ -1016,20 +1036,20 @@ input[type=submit]:hover {
   transform: translateX(-50%);
 }
 
-/* line 71, ../scss/_buttons.scss */
+/* line 80, ../scss/_buttons.scss */
 .regenerate-btn {
   text-align: center;
   display: block;
 }
 
-/* line 76, ../scss/_buttons.scss */
+/* line 85, ../scss/_buttons.scss */
 .about-btn {
   position: fixed;
   bottom: 0;
   right: 0;
 }
 
-/* line 82, ../scss/_buttons.scss */
+/* line 91, ../scss/_buttons.scss */
 .close-btn {
   position: absolute;
   right: 0;
@@ -1051,6 +1071,10 @@ input[type=submit]:hover {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
 }
 /* line 22, ../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
 .user-story:after {

@@ -1,10 +1,13 @@
 <template name="dashboard">
+	<header class="hero-header">
+		<div class="wrapper story-wrapper">
+			<h4 class="hero-title strong">Dashboard</h4>
+		</div>
+	</header>
 	<div class="wrapper story-wrapper">
-		<header class="dashboard-header">
-			<h4 class="header-title">Dashboard</h4>
+		<div class="t-a-center pad-1">
 			<a class="btn primary-btn create-story-btn" href="#">Create Emojination</a>
-		</header>
-
+		</div>
 		{{#if userStories}}
 			<div class="user-stories">
 				{{#each userStories}}
