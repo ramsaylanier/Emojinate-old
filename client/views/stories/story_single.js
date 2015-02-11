@@ -114,12 +114,12 @@ Template.storySingle.events({
 	'click .tweet-btn': function(e, template){
 		e.preventDefault();
 
-		var text = template.data.text.replace(/&nbsp;/gi,'');
+		var text = template.data.text.replace(/&nbsp;/gi,'').substr(0, 105) + '...';
 		var emojis = $('.emoji img');
 		var emojiString = _.pluck(emojis, 'alt').join('');
 		var url = encodeURI(window.location.href);
 
-		window.open('https://twitter.com/intent/tweet?text=' + text + ' ' + emojiString + '&url=' + url, '_blank');
+		window.open('https://twitter.com/intent/tweet?text=' + text + ' ' + emojiString + '&via=emojinateapp&url=' + url, '_blank');
 	},
 	'paste .story-text': function(e){
 		// cancel paste
