@@ -127,6 +127,26 @@ html{
 	}
 }
 
+.not-found-section{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate3d(-50%, -50%, 0));
+
+	.sad-emojis{
+		position: relative;
+		margin-bottom: 3rem;
+	}
+
+	.sad-emoji{
+		position: absolute;
+
+		&.off-page{
+			opacity: 0.0;
+		}
+	}
+}
+
 //helpers
 
 .t-a-center{

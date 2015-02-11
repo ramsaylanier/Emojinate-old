@@ -1,14 +1,16 @@
 <template name="storySingle">
 	<div class="story-header off-page">
-			{{#if author}}
-				{{{editable "title"}}}
-			{{else}}
-				<div class="story-title">
-					{{{title}}}
-				</div>
-			{{/if}}
-			<p class="story-title story-author">- by {{authorName}}</p>
-		<a href="#" target="_blank" class="btn primary-btn tweet-btn">{{>twitterIcon}} Tweet This</a>
+		{{#if author}}
+			{{{editable "title"}}}
+		{{else}}
+			<div class="story-title">
+				{{{title}}}
+			</div>
+		{{/if}}
+		<p class="story-title story-author">- by {{authorName}}</p>
+		{{#if published}}
+			<a href="#" target="_blank" class="btn primary-btn tweet-btn">{{>twitterIcon}} Tweet This</a>
+		{{/if}}
 	</div>
 
 	<div class="story-body">

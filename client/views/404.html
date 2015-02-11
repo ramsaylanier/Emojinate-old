@@ -1,0 +1,11 @@
+<template name="notFound">
+	<section class="not-found-section t-a-center">
+		<div class="sad-emojis">
+			{{#each sadEmojis}}
+				<span class="sad-emoji off-page">{{#emojione}}{{this}}{{/emojione}}</span>
+			{{/each}}
+		</div>
+
+		<p>The page you were looking for can't be found. So, you know, maybe try harder.</p>
+	</section>
+</template>
