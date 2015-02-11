@@ -23,33 +23,30 @@
 
 <template name="dashboardExcerpt">
 	<div class="user-story excerpt off-page">
-		<a class="story-link" href="{{pathFor route='storySingle'}}">
-			<div class="story-header">
-				<p class="story-title">
-					{{{title}}}
-				</p>
-			</div>
-
-			<div class="story-date">
-				<p>{{publishedOnDate}},</p>
-				<p>{{publishedOnYear}}</p>
-			</div>
-
-			<p class="emoji-string">
-				{{#each emojis}}
-					<span class="emoji">{{#emojione}}{{this.shortname}}{{/emojione}}</span>
-				{{/each}}
+		<div class="story-header">
+			<p class="story-title">
+				<a class="story-link" href="{{pathFor route='storySingle'}}">{{{title}}}</a>
 			</p>
-			<p class="story-text">"{{{textExcerpt}}}"</p>
-			
-			<p class="story-status {{#if published}}published{{/if}}">
-			{{#if published}}
-				Published
-			{{else}}
-				Unpublished
-			{{/if}}
-			</p>
-		</a>
+		</div>
 
+		<div class="story-date">
+			<p>{{publishedOnDate}},</p>
+			<p>{{publishedOnYear}}</p>
+		</div>
+
+		<p class="emoji-string">
+			{{#each emojis}}
+				<span class="emoji">{{#emojione}}{{this.shortname}}{{/emojione}}</span>
+			{{/each}}
+		</p>
+		<p class="story-text">"{{{textExcerpt}}}"</p>
+		
+		<p class="story-status {{#if published}}published{{/if}}">
+		{{#if published}}
+			Published
+		{{else}}
+			Unpublished
+		{{/if}}
+		</p>
 	</div>
 </template>

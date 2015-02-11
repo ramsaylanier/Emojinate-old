@@ -1,10 +1,6 @@
 Template.dashboard.rendered = function(){
-	var excerpts = $('.user-story');
-
-	_.each(excerpts, function(excerpt, index){
-		Meteor.setTimeout(function(){
-			$(excerpt).removeClass('off-page');
-		}, 100 * index);
+	Meteor.defer(function(){
+		$('.user-story').removeClass('off-page');
 	})
 }
 
@@ -36,18 +32,13 @@ Template.dashboard.helpers({
 Template.dashboardExcerpt.events({
 	'click .story-link': function(e){
 		e.preventDefault();
-		var stories = $('.user-story');
 		var target = $(e.currentTarget);
 		var url = target.attr('href');
 		var moveAmt = 60;
 
-		_.each(stories, function(story, index){
-			Meteor.setTimeout(function(){
-				$(story).velocity({
-					opacity: 0,
-					translateY: moveAmt
-				});
-			}, 100 * index);
+		$('.user-story').velocity({
+			opacity: 0,
+			translateY: moveAmt
 		});
 
 		$('.dashboard-header').velocity({
@@ -57,7 +48,7 @@ Template.dashboardExcerpt.events({
 
 		Meteor.setTimeout(function(){
 			Router.go(url);
-		}, (110 * stories.length) + 300);
+		}, 600);
 	}
 })
 

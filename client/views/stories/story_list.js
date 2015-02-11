@@ -27,6 +27,12 @@ Template.storyList.helpers({
 	}
 });
 
+Template.storyListExcerpt.rendered = function(){
+	Meteor.defer(function(){
+		this.$('.user-story').removeClass('off-page');
+	})
+}
+
 Template.storyListExcerpt.events({
 	'click .up-vote-btn': function(e, template){
 		e.preventDefault();
@@ -44,33 +50,6 @@ Template.storyListExcerpt.events({
 					throwError(error.reason, 'error');
 			});
 		}
-	},
-	'click .story-link': function(e){
-		e.preventDefault();
-		var stories = $('.user-story');
-		var target = $(e.currentTarget);
-		var url = target.attr('href');
-
-		_.each(stories, function(story, index){
-			Meteor.setTimeout(function(){
-				$(story).velocity({
-					opacity: 0,
-					translateY: 30,
-				});
-			}, 100);
-		});
-
-		$('.welcome-section').velocity({
-			opacity: 0
-		});
-
-		$('.story-list-section').velocity({
-			opacity: 0
-		})
-
-		Meteor.setTimeout(function(){
-			Router.go(url);
-		}, 600);
 	}
 });
 

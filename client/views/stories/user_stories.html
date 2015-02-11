@@ -1,0 +1,18 @@
+<template name="userStories">
+	<header class="hero-header">
+		<div class="wrapper story-wrapper">
+			<h4 class="hero-title strong">{{username}}'s Stories</h4>
+		</div>
+	</header>
+	<div class="wrapper story-wrapper">
+		{{#if this}}
+			<div class="user-stories">
+				{{#each this}}
+					{{>storyListExcerpt}}
+				{{/each}}
+			</div>
+		{{else}}
+			<p>This person has not created any user stories.</p>
+		{{/if}}
+	</div>
+</template>

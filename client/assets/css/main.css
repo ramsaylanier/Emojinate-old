@@ -1319,9 +1319,11 @@ input[type=submit]:hover {
   display: block;
   height: 100%;
   width: 100%;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
 
-/* line 188, ../scss/_stories.scss */
+/* line 190, ../scss/_stories.scss */
 .story-header {
   position: relative;
   width: 100%;
@@ -1332,12 +1334,12 @@ input[type=submit]:hover {
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 195, ../scss/_stories.scss */
+/* line 197, ../scss/_stories.scss */
 .story-header.off-page {
   opacity: 0.0;
 }
 
-/* line 200, ../scss/_stories.scss */
+/* line 202, ../scss/_stories.scss */
 .story-title {
   font-size: 3rem;
   font-weight: 400;
@@ -1345,35 +1347,35 @@ input[type=submit]:hover {
   background-color: transparent;
   font-family: "Playfair Display", serif;
   text-align: center;
-  text-transform: uppercase;
   color: #DA3D3D;
   -moz-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 211, ../scss/_stories.scss */
+/* line 212, ../scss/_stories.scss */
 .story-title:focus {
   outline: none;
   color: #DA3D3D;
 }
 
-/* line 217, ../scss/_stories.scss */
+/* line 218, ../scss/_stories.scss */
 .story-author {
   font-size: 1.2rem;
   text-align: center;
+  font-family: "Fauna One", sans-serif;
 }
 
-/* line 222, ../scss/_stories.scss */
+/* line 224, ../scss/_stories.scss */
 .story-body {
   padding: 1rem 0rem;
 }
 
-/* line 226, ../scss/_stories.scss */
+/* line 228, ../scss/_stories.scss */
 .story-wrapper {
   max-width: 600px;
 }
-/* line 230, ../scss/_stories.scss */
+/* line 232, ../scss/_stories.scss */
 .story-wrapper.story-active .dashboard-header {
   -moz-transition: all 100ms ease-out;
   -o-transition: all 100ms ease-out;
@@ -1382,7 +1384,7 @@ input[type=submit]:hover {
   opacity: 0.0;
 }
 
-/* line 237, ../scss/_stories.scss */
+/* line 239, ../scss/_stories.scss */
 .story-text {
   margin-top: 1rem;
   padding: 1rem;
@@ -1390,19 +1392,19 @@ input[type=submit]:hover {
   font-family: "Fauna One", sans-serif;
   border: 2px solid #f2f2f2;
 }
-/* line 244, ../scss/_stories.scss */
+/* line 246, ../scss/_stories.scss */
 .story-text:focus {
   outline: none;
   border: 2px solid black;
 }
 
-/* line 251, ../scss/_stories.scss */
+/* line 253, ../scss/_stories.scss */
 .story-save {
   position: relative;
   padding: 1rem 0rem;
 }
 
-/* line 256, ../scss/_stories.scss */
+/* line 258, ../scss/_stories.scss */
 .emoji-string {
   position: relative;
   padding: 1rem;
@@ -1416,14 +1418,14 @@ input[type=submit]:hover {
   transition: all 300ms ease-out 0ms;
 }
 
-/* line 265, ../scss/_stories.scss */
+/* line 267, ../scss/_stories.scss */
 .emoji {
   -moz-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 268, ../scss/_stories.scss */
+/* line 270, ../scss/_stories.scss */
 .emoji.off-page {
   opacity: 0.0;
 }

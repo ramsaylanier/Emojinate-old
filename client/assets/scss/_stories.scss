@@ -183,6 +183,8 @@
 	display: block;
 	height: 100%;
 	width: 100%;
+	text-decoration: underline;
+	text-transform: uppercase;
 }
 
 .story-header{
@@ -204,7 +206,6 @@
 	background-color: transparent;
 	font-family: $serif;
 	text-align: center;
-	text-transform: uppercase;
 	color: $highlight;
 	@include transition(all 300ms ease-out);
 
@@ -217,6 +218,7 @@
 .story-author{
 	font-size: 1.2rem;
 	text-align: center;
+	font-family: $sansSerif;
 }
 
 .story-body{

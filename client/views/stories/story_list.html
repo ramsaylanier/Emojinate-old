@@ -52,9 +52,10 @@
 	<div class="user-story excerpt off-page">
 		<div class="story-header">
 			<p class="story-title">
-				<a class="story-link" href="{{pathFor route='storySingle'}}">{{{title}}}</a>
-				<p class="story-author">- by {{authorName}}</p>
+				<a class="story-link strong transition-link" href="{{pathFor route='storySingle'}}">{{{title}}}</a>
 			</p>
+			<p class="story-author">- by <a href="/{{authorName}}" class="strong transition-link">{{authorName}}</a></p>
+
 		</div>
 		<div class="story-date">
 			<p>{{publishedOnDate}},</p>
