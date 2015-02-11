@@ -1,13 +1,33 @@
-Template.storyList.rendered = function(){
-	var excerpts = $('.user-story');
+incrementLimit = function() {
+	newLimit = Session.get('limit') + 5;
+	Session.set('limit', newLimit);
+}
 
-	Meteor.defer(function(){
-		_.each(excerpts, function(excerpt, index){
-			Meteor.setTimeout(function(){
-				$(excerpt).removeClass('off-page');
-			}, 100 * index);
-		})
-	})
+Template.storyList.created = function(){
+	Session.setDefault('limit', 5);
+
+	Deps.autorun(function() {
+		Meteor.subscribe('publishedStories', Session.get('limit'));
+	});
+}
+
+
+Template.storyList.rendered = function(){
+	// var excerpts = $('.user-story');
+
+	// Meteor.defer(function(){
+	// 	_.each(excerpts, function(excerpt, index){
+	// 		Meteor.setTimeout(function(){
+	// 			$(excerpt).removeClass('off-page');
+	// 		}, 100 * index);
+	// 	})
+	// })
+
+	$(window).scroll(function() {
+	    if ($(window).scrollTop() + $(window).height() > $(document).height()) {
+		      incrementLimit();
+	    }
+	});
 }
 
 Template.storyList.events({
@@ -17,6 +37,9 @@ Template.storyList.events({
 })
 
 Template.storyList.helpers({
+	stories: function(){
+		return Stories.find({ }, { limit: Session.get('limit'), sort: {publishedOn: -1}});
+	},
 	randomEmojis: function(){
 		var emojis = _.map(_.sample(_.filter(Meteor.emojis(), function(emoji){
 				return _.indexOf(['places', 'other'], emoji.category) == -1; 
@@ -32,6 +55,10 @@ Template.storyList.helpers({
 			return true
 	}
 });
+
+Template.storyListExcerpt.rendered = function(){
+	this.$('.user-story').removeClass('off-page');
+}
 
 
 Template.storyListExcerpt.events({
