@@ -1276,9 +1276,14 @@ input[type=submit]:hover {
     border-left: 10px solid transparent;
     border-top: 10px solid #2795e9;
   }
+  /* line 149, ../scss/_stories.scss */
+  .story-voting.upvoted:after {
+    border-left: 10px solid transparent;
+    border-top: 10px solid #699526;
+  }
 }
 
-/* line 150, ../scss/_stories.scss */
+/* line 157, ../scss/_stories.scss */
 .up-vote-btn {
   position: relative;
   display: inline-block;
@@ -1294,7 +1299,7 @@ input[type=submit]:hover {
   transition: all 300ms ease-out;
 }
 
-/* line 162, ../scss/_stories.scss */
+/* line 169, ../scss/_stories.scss */
 .story-status {
   width: 100%;
   position: relative;
@@ -1303,20 +1308,20 @@ input[type=submit]:hover {
   -webkit-border-radius: 0;
   border-radius: 0 0 5px 5px;
 }
-/* line 168, ../scss/_stories.scss */
+/* line 175, ../scss/_stories.scss */
 .story-status.published {
   background-color: #DA3D3D;
   color: white;
 }
 
-/* line 175, ../scss/_stories.scss */
+/* line 182, ../scss/_stories.scss */
 .story-link {
   display: block;
   height: 100%;
   width: 100%;
 }
 
-/* line 181, ../scss/_stories.scss */
+/* line 188, ../scss/_stories.scss */
 .story-header {
   position: relative;
   width: 100%;
@@ -1327,12 +1332,12 @@ input[type=submit]:hover {
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 188, ../scss/_stories.scss */
+/* line 195, ../scss/_stories.scss */
 .story-header.off-page {
   opacity: 0.0;
 }
 
-/* line 193, ../scss/_stories.scss */
+/* line 200, ../scss/_stories.scss */
 .story-title {
   font-size: 3rem;
   font-weight: 400;
@@ -1347,28 +1352,28 @@ input[type=submit]:hover {
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 204, ../scss/_stories.scss */
+/* line 211, ../scss/_stories.scss */
 .story-title:focus {
   outline: none;
   color: #DA3D3D;
 }
 
-/* line 210, ../scss/_stories.scss */
+/* line 217, ../scss/_stories.scss */
 .story-author {
   font-size: 1.2rem;
   text-align: center;
 }
 
-/* line 215, ../scss/_stories.scss */
+/* line 222, ../scss/_stories.scss */
 .story-body {
   padding: 1rem 0rem;
 }
 
-/* line 219, ../scss/_stories.scss */
+/* line 226, ../scss/_stories.scss */
 .story-wrapper {
   max-width: 600px;
 }
-/* line 223, ../scss/_stories.scss */
+/* line 230, ../scss/_stories.scss */
 .story-wrapper.story-active .dashboard-header {
   -moz-transition: all 100ms ease-out;
   -o-transition: all 100ms ease-out;
@@ -1377,7 +1382,7 @@ input[type=submit]:hover {
   opacity: 0.0;
 }
 
-/* line 230, ../scss/_stories.scss */
+/* line 237, ../scss/_stories.scss */
 .story-text {
   margin-top: 1rem;
   padding: 1rem;
@@ -1385,19 +1390,19 @@ input[type=submit]:hover {
   font-family: "Fauna One", sans-serif;
   border: 2px solid #f2f2f2;
 }
-/* line 237, ../scss/_stories.scss */
+/* line 244, ../scss/_stories.scss */
 .story-text:focus {
   outline: none;
   border: 2px solid black;
 }
 
-/* line 244, ../scss/_stories.scss */
+/* line 251, ../scss/_stories.scss */
 .story-save {
   position: relative;
   padding: 1rem 0rem;
 }
 
-/* line 249, ../scss/_stories.scss */
+/* line 256, ../scss/_stories.scss */
 .emoji-string {
   position: relative;
   padding: 1rem;
@@ -1411,14 +1416,14 @@ input[type=submit]:hover {
   transition: all 300ms ease-out 0ms;
 }
 
-/* line 258, ../scss/_stories.scss */
+/* line 265, ../scss/_stories.scss */
 .emoji {
   -moz-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 261, ../scss/_stories.scss */
+/* line 268, ../scss/_stories.scss */
 .emoji.off-page {
   opacity: 0.0;
 }

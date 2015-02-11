@@ -144,6 +144,13 @@
 			border-left: 10px solid transparent;
 			border-top: 10px solid darken($blue, 10%);
 		}
+
+		&.upvoted{
+			&:after{
+				border-left: 10px solid transparent;
+				border-top: 10px solid darken($green, 10%);
+			}
+		}
 	}
 }
 
