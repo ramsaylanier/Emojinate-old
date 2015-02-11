@@ -11,5 +11,5 @@ Meteor.publish('publishedStories', function(limit){
 	//     limit = 0;
 	// }
 
-	return Stories.find({published: true}, {limit: limit, sort: {publishedOn: -1}});
+	return Stories.find({published: true}, {limit: limit, sort: {score: -1, publishedOn: -1}});
 })
