@@ -7,9 +7,9 @@ Meteor.publish('userStories', function(){
 })
 
 Meteor.publish('publishedStories', function(limit){
-	if (limit > Stories.find({published: true}).count()) {
-	    limit = 0;
-	}
+	// if (limit > Stories.find({published: true}).count()) {
+	//     limit = 0;
+	// }
 	
 	return Stories.find({published: true}, {limit: limit});
 })

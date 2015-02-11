@@ -7,7 +7,7 @@
 
 	{{#if currentUser}}
 		<a href="#" class="header-link account-link">{{currentUser.username}} <span class="arrow">&#9652;</span></a>
-		<a href="/dashboard" class="header-link dashboard-link">Dashboard</a>
+		<a href="{{pathFor route='dashboard'}}" class="header-link dashboard-link">Dashboard</a>
 	{{else}}
 		<a href="#" class="btn header-link twitter-login-link">{{>twitterIcon}}Login</a>
 	{{/if}}

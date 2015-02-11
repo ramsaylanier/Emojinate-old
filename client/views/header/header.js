@@ -12,10 +12,5 @@ Template.header.events({
 				$('.account').remove();
 			}, 400);
 		}
-	},
-	'click .dashboard': function(e){
-		e.preventDefault();
-
-		$('.user-story').removeClass('off-page');
 	}
 });
