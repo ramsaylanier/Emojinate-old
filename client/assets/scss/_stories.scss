@@ -61,26 +61,27 @@
 	}
 }
 
-.story-date{
+.story-date, .story-voting{
 	position: absolute;
-	left: -30px;
 	top: 0px;
 	width: 60px;
 	padding: 5px;
-	color: lighten($highlight, 40%);
+	color: white;
 	font-size: .7rem;
 	text-align:center;
-	background-color: $highlight;
 	@include transition(all 300ms ease-out);
 
 	&:after{
 		content: '';
 		position: absolute;
 		bottom: -20px;
-		left: 0px;
-		border-left: 30px solid transparent;
-		border-top: 20px solid darken($highlight, 10%);
+		@include transition(all 300ms ease-out);
 	}
+}
+
+.story-date{
+	right: -30px;
+	background-color: $highlight;
 
 	@media #{$mobile}{
 		position: relative;
@@ -88,17 +89,74 @@
 		width: 100%;
 		bottom: 0;
 		left: 0;
-		background-color: darken(white, 10%);
 		color: $highlight;	
+		background-color: darken(white, 10%);
+		left: 0;
 
 		&:after{
 			display: none;
 		}
 
-		p{
+		p, a{
 			display: inline-block;
 		}
 	}
+
+	&:after{
+		right: 0px;
+		border-right: 30px solid transparent;
+		border-top: 20px solid darken($highlight, 10%);
+	}
+}
+
+.story-voting{
+	left: -30px;
+	background-color: $blue;
+
+	&:after{
+		left: 0px;
+		border-left: 30px solid transparent;
+		border-top: 20px solid darken($blue, 10%);
+	}
+
+	&.upvoted{
+		background-color: $green;
+		color: darken($green, 20%);
+
+		.up-vote-btn{
+			border-bottom: 12px solid darken($green, 20%);
+		}
+
+		&:after{
+			border-left: 30px solid transparent;
+			border-top: 20px solid darken($green, 10%);
+		}
+	}
+
+	@media #{$mobile}{
+		position: absolute;
+		width: 25px;
+		left: -10px;
+		padding: 0;
+
+		&:after{
+			bottom: -10px;
+			border-left: 10px solid transparent;
+			border-top: 10px solid darken($blue, 10%);
+		}
+	}
+}
+
+.up-vote-btn{
+	position: relative;
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	border-bottom: 12px solid white;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 12px solid transparent;
+	@include transition(all 300ms ease-out);
 }
 
 .story-status{

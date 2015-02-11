@@ -1,27 +1,7 @@
-// incrementLimit = function() {
-// 	newLimit = Session.get('limit') + 5;
-// 	Session.set('limit', newLimit);
-// }
-
-Template.storyList.created = function(){
-	// Session.setDefault('limit', 5);
-
-	// // Deps.autorun(function() {
-	// // 	Meteor.subscribe('publishedStories', Session.get('limit'));
-	// // });
-}
-
-
 Template.storyList.rendered = function(){
 	Meteor.defer(function(){
 		$('.user-story').removeClass('off-page');
 	})
-
-	// $(window).scroll(function() {
-	//     if ($(window).scrollTop() + $(window).height() > $(document).height()) {
-	// 	      incrementLimit();
-	//     }
-	// });
 }
 
 Template.storyList.events({
@@ -31,9 +11,6 @@ Template.storyList.events({
 })
 
 Template.storyList.helpers({
-	// stories: function(){
-	// 	return Stories.find({ }, { limit: Session.get('limit'), sort: {publishedOn: -1}});
-	// },
 	randomEmojis: function(){
 		var emojis = _.map(_.sample(_.filter(Meteor.emojis(), function(emoji){
 				return _.indexOf(['places', 'other'], emoji.category) == -1; 
@@ -50,12 +27,24 @@ Template.storyList.helpers({
 	}
 });
 
-// Template.storyListExcerpt.rendered = function(){
-// 	this.$('.user-story').removeClass('off-page');
-// }
-
-
 Template.storyListExcerpt.events({
+	'click .up-vote-btn': function(e, template){
+		e.preventDefault();
+
+		var currentUser = Meteor.userId();
+		var storyId = template.data._id;
+
+		console.log(storyId);
+
+		if (!currentUser){
+			throwError('You must login to upvote.', 'error');
+		} else {
+			Meteor.call('upvoteStory', currentUser, storyId, function(error){
+				if (error)
+					throwError(error.reason, 'error');
+			});
+		}
+	},
 	'click .story-link': function(e){
 		e.preventDefault();
 		var stories = $('.user-story');
@@ -104,5 +93,14 @@ Template.storyListExcerpt.helpers({
 		} else {
 			return this.text;
 		}
+	},
+	score: function(){
+		return this.score || 0;
+	},
+	upvoted: function(){
+		var voted = _.contains(this.voters, Meteor.userId());
+
+		if (voted)
+			return 'upvoted'
 	}
 })
