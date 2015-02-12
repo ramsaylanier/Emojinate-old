@@ -41,12 +41,18 @@ Template.layout.events({
 		}
 	},
 	'click .sort-date-btn': function(){
-		Session.set('sortBy', 'date');
-		Session.set('limit', 15);
+		$('.user-story').addClass('off-page');
+		Meteor.setTimeout(function(){
+			Session.set('sortBy', 'date');
+			Session.set('limit', 15);
+		}, 500);
 	},
 	'click .sort-score-btn': function(){
-		Session.set('sortBy', 'score');
-		Session.set('limit', 15);
+		$('.user-story').addClass('off-page');
+		Meteor.setTimeout(function(){
+			Session.set('sortBy', 'score');
+			Session.set('limit', 15);
+		}, 500);
 	},
 	'click .load-more-btn': function(){
 		console.log(Iron.controller());
