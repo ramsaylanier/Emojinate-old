@@ -42,9 +42,11 @@ Template.layout.events({
 	},
 	'click .sort-date-btn': function(){
 		Session.set('sortBy', 'date');
+		Session.set('limit', 15);
 	},
 	'click .sort-score-btn': function(){
 		Session.set('sortBy', 'score');
+		Session.set('limit', 15);
 	},
 	'click .load-more-btn': function(){
 		console.log(Iron.controller());
