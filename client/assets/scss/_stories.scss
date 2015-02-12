@@ -14,32 +14,14 @@
 			opacity: 0.0;
 		}
 
-		&.active{
-			z-index: 600;
-			background-color: transparent;
-
-			.story-date, .emoji-string, .story-text, .story-status, .read-more-btn{
-				opacity: 0.0;
-			}
-
-			.story-title{
-				font-size: 3rem;
-			}
-
-			.story-header{
-				padding: 3rem;
-				background-color: darken(white, 5%);
-			}
-		}
-
 		.story-header{
 			background-color: darken(white, 15%);
 			padding: .5rem;
 		}
 
-
 	 	.story-title{
 	 		font-size: 1.6rem;
+	 		padding: 0 1rem;
 	 	}
 
 	 	.emoji-string{
@@ -223,6 +205,10 @@
 
 .story-body{
 	padding: 1rem 0rem;
+
+	.emoji-string{
+		border: 5px solid darken(white, 5%);
+	}
 }
 
 .story-wrapper{
@@ -237,7 +223,6 @@
 }
 
 .story-text{
-	margin-top: 1rem;
 	padding: 1rem;
 	background-color: darken(white, 5%);
 	font-family: $sansSerif;

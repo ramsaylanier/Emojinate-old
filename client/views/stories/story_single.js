@@ -16,6 +16,12 @@ Template.storySingle.helpers({
 	},
 	editable: function(type){
 		return '<div class="story-' + type + '" contenteditable="true">' + this[type]+ '</div>'
+	},
+	upvoted: function(){
+		var voted = _.contains(this.voters, Meteor.userId());
+
+		if (voted)
+			return 'upvoted'
 	}
 })
 
@@ -140,5 +146,22 @@ Template.storySingle.events({
 
 	    // insert text manually
 	    document.execCommand("insertHTML", false, text);
+	},
+	'click .up-vote-btn': function(e, template){
+		e.preventDefault();
+
+		var currentUser = Meteor.userId();
+		var storyId = template.data._id;
+
+		console.log(storyId);
+
+		if (!currentUser){
+			throwError('You must login to upvote.', 'error');
+		} else {
+			Meteor.call('upvoteStory', currentUser, storyId, function(error){
+				if (error)
+					throwError(error.reason, 'error');
+			});
+		}
 	}
 });

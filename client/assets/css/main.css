@@ -1138,33 +1138,16 @@ input[type=submit]:hover {
   opacity: 0.0;
 }
 /* line 17, ../scss/_stories.scss */
-.user-story.excerpt.active {
-  z-index: 600;
-  background-color: transparent;
-}
-/* line 21, ../scss/_stories.scss */
-.user-story.excerpt.active .story-date, .user-story.excerpt.active .emoji-string, .user-story.excerpt.active .story-text, .user-story.excerpt.active .story-status, .user-story.excerpt.active .read-more-btn {
-  opacity: 0.0;
-}
-/* line 25, ../scss/_stories.scss */
-.user-story.excerpt.active .story-title {
-  font-size: 3rem;
-}
-/* line 29, ../scss/_stories.scss */
-.user-story.excerpt.active .story-header {
-  padding: 3rem;
-  background-color: #f2f2f2;
-}
-/* line 35, ../scss/_stories.scss */
 .user-story.excerpt .story-header {
   background-color: #d9d9d9;
   padding: .5rem;
 }
-/* line 41, ../scss/_stories.scss */
+/* line 22, ../scss/_stories.scss */
 .user-story.excerpt .story-title {
   font-size: 1.6rem;
+  padding: 0 1rem;
 }
-/* line 45, ../scss/_stories.scss */
+/* line 27, ../scss/_stories.scss */
 .user-story.excerpt .emoji-string {
   position: relative;
   background-color: #e6e6e6;
@@ -1175,17 +1158,17 @@ input[type=submit]:hover {
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
-/* line 53, ../scss/_stories.scss */
+/* line 35, ../scss/_stories.scss */
 .user-story.excerpt .story-text {
   margin-top: 0;
   border: 0;
 }
-/* line 58, ../scss/_stories.scss */
+/* line 40, ../scss/_stories.scss */
 .user-story.excerpt .story-author {
   font-size: .9rem;
 }
 
-/* line 64, ../scss/_stories.scss */
+/* line 46, ../scss/_stories.scss */
 .story-date, .story-voting {
   position: absolute;
   top: 0px;
@@ -1199,7 +1182,7 @@ input[type=submit]:hover {
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 74, ../scss/_stories.scss */
+/* line 56, ../scss/_stories.scss */
 .story-date:after, .story-voting:after {
   content: '';
   position: absolute;
@@ -1210,13 +1193,13 @@ input[type=submit]:hover {
   transition: all 300ms ease-out;
 }
 
-/* line 82, ../scss/_stories.scss */
+/* line 64, ../scss/_stories.scss */
 .story-date {
   right: -30px;
   background-color: #DA3D3D;
 }
 @media only screen and (max-width: 568px) {
-  /* line 82, ../scss/_stories.scss */
+  /* line 64, ../scss/_stories.scss */
   .story-date {
     position: relative;
     text-align: center;
@@ -1227,69 +1210,69 @@ input[type=submit]:hover {
     background-color: #e6e6e6;
     left: 0;
   }
-  /* line 96, ../scss/_stories.scss */
+  /* line 78, ../scss/_stories.scss */
   .story-date:after {
     display: none;
   }
-  /* line 100, ../scss/_stories.scss */
+  /* line 82, ../scss/_stories.scss */
   .story-date p, .story-date a {
     display: inline-block;
   }
 }
-/* line 105, ../scss/_stories.scss */
+/* line 87, ../scss/_stories.scss */
 .story-date:after {
   right: 0px;
   border-right: 30px solid transparent;
   border-top: 20px solid #bf2525;
 }
 
-/* line 112, ../scss/_stories.scss */
+/* line 94, ../scss/_stories.scss */
 .story-voting {
   left: -30px;
   background-color: #55acee;
 }
-/* line 116, ../scss/_stories.scss */
+/* line 98, ../scss/_stories.scss */
 .story-voting:after {
   left: 0px;
   border-left: 30px solid transparent;
   border-top: 20px solid #2795e9;
 }
-/* line 122, ../scss/_stories.scss */
+/* line 104, ../scss/_stories.scss */
 .story-voting.upvoted {
   background-color: #85be30;
   color: #4c6d1b;
 }
-/* line 126, ../scss/_stories.scss */
+/* line 108, ../scss/_stories.scss */
 .story-voting.upvoted .up-vote-btn {
   border-bottom: 12px solid #4c6d1b;
 }
-/* line 130, ../scss/_stories.scss */
+/* line 112, ../scss/_stories.scss */
 .story-voting.upvoted:after {
   border-left: 30px solid transparent;
   border-top: 20px solid #699526;
 }
 @media only screen and (max-width: 568px) {
-  /* line 112, ../scss/_stories.scss */
+  /* line 94, ../scss/_stories.scss */
   .story-voting {
     position: absolute;
     width: 25px;
     left: -10px;
     padding: 0;
   }
-  /* line 142, ../scss/_stories.scss */
+  /* line 124, ../scss/_stories.scss */
   .story-voting:after {
     bottom: -10px;
     border-left: 10px solid transparent;
     border-top: 10px solid #2795e9;
   }
-  /* line 149, ../scss/_stories.scss */
+  /* line 131, ../scss/_stories.scss */
   .story-voting.upvoted:after {
     border-left: 10px solid transparent;
     border-top: 10px solid #699526;
   }
 }
 
-/* line 157, ../scss/_stories.scss */
+/* line 139, ../scss/_stories.scss */
 .up-vote-btn {
   position: relative;
   display: inline-block;
@@ -1305,7 +1288,7 @@ input[type=submit]:hover {
   transition: all 300ms ease-out;
 }
 
-/* line 169, ../scss/_stories.scss */
+/* line 151, ../scss/_stories.scss */
 .story-status {
   width: 100%;
   position: relative;
@@ -1314,13 +1297,13 @@ input[type=submit]:hover {
   -webkit-border-radius: 0;
   border-radius: 0 0 5px 5px;
 }
-/* line 175, ../scss/_stories.scss */
+/* line 157, ../scss/_stories.scss */
 .story-status.published {
   background-color: #DA3D3D;
   color: white;
 }
 
-/* line 182, ../scss/_stories.scss */
+/* line 164, ../scss/_stories.scss */
 .story-link {
   display: block;
   height: 100%;
@@ -1329,7 +1312,7 @@ input[type=submit]:hover {
   text-transform: uppercase;
 }
 
-/* line 190, ../scss/_stories.scss */
+/* line 172, ../scss/_stories.scss */
 .story-header {
   position: relative;
   width: 100%;
@@ -1340,12 +1323,12 @@ input[type=submit]:hover {
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 197, ../scss/_stories.scss */
+/* line 179, ../scss/_stories.scss */
 .story-header.off-page {
   opacity: 0.0;
 }
 
-/* line 202, ../scss/_stories.scss */
+/* line 184, ../scss/_stories.scss */
 .story-title {
   font-size: 3rem;
   font-weight: 400;
@@ -1359,29 +1342,33 @@ input[type=submit]:hover {
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 212, ../scss/_stories.scss */
+/* line 194, ../scss/_stories.scss */
 .story-title:focus {
   outline: none;
   color: #DA3D3D;
 }
 
-/* line 218, ../scss/_stories.scss */
+/* line 200, ../scss/_stories.scss */
 .story-author {
   font-size: 1.2rem;
   text-align: center;
   font-family: "Fauna One", sans-serif;
 }
 
-/* line 224, ../scss/_stories.scss */
+/* line 206, ../scss/_stories.scss */
 .story-body {
   padding: 1rem 0rem;
 }
+/* line 209, ../scss/_stories.scss */
+.story-body .emoji-string {
+  border: 5px solid #f2f2f2;
+}
 
-/* line 228, ../scss/_stories.scss */
+/* line 214, ../scss/_stories.scss */
 .story-wrapper {
   max-width: 600px;
 }
-/* line 232, ../scss/_stories.scss */
+/* line 218, ../scss/_stories.scss */
 .story-wrapper.story-active .dashboard-header {
   -moz-transition: all 100ms ease-out;
   -o-transition: all 100ms ease-out;
@@ -1390,27 +1377,26 @@ input[type=submit]:hover {
   opacity: 0.0;
 }
 
-/* line 239, ../scss/_stories.scss */
+/* line 225, ../scss/_stories.scss */
 .story-text {
-  margin-top: 1rem;
   padding: 1rem;
   background-color: #f2f2f2;
   font-family: "Fauna One", sans-serif;
   border: 2px solid #f2f2f2;
 }
-/* line 246, ../scss/_stories.scss */
+/* line 231, ../scss/_stories.scss */
 .story-text:focus {
   outline: none;
   border: 2px solid black;
 }
 
-/* line 253, ../scss/_stories.scss */
+/* line 238, ../scss/_stories.scss */
 .story-save {
   position: relative;
   padding: 1rem 0rem;
 }
 
-/* line 258, ../scss/_stories.scss */
+/* line 243, ../scss/_stories.scss */
 .emoji-string {
   position: relative;
   padding: 1rem;
@@ -1424,14 +1410,14 @@ input[type=submit]:hover {
   transition: all 300ms ease-out 0ms;
 }
 
-/* line 267, ../scss/_stories.scss */
+/* line 252, ../scss/_stories.scss */
 .emoji {
   -moz-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
-/* line 270, ../scss/_stories.scss */
+/* line 255, ../scss/_stories.scss */
 .emoji.off-page {
   opacity: 0.0;
 }

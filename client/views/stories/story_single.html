@@ -13,13 +13,19 @@
 		{{/if}}
 	</div>
 
-	<div class="story-body">
+	<div class="story-body {{#unless author}}bordered{{/unless}}">
 		<div class="wrapper story-wrapper">
+
 			<div class="emoji-string">
 				{{#each emojis}}
 					<span class="emoji">{{#emojione}}{{shortname}}{{/emojione}}</span>
 				{{/each}}
 				<br>
+			</div>
+
+			<div class="story-voting {{upvoted}}">
+				<a href="#" class="up-vote-btn white"></a>
+				<p>{{#if score}}{{score}}{{else}}0{{/if}}</p>
 			</div>
 
 			{{#if author}}
@@ -28,8 +34,6 @@
 				{{/unless}}
 			{{/if}}
 
-
-			
 			{{#if author}}
 				{{{editable "text"}}}
 			{{else}}
@@ -38,8 +42,8 @@
 				</div>
 			{{/if}}
 
-			<div class="story-save">
-				{{#if author}}	
+			{{#if author}}	
+				<div class="story-save">
 					{{#if published}}
 						<a href="#" class="btn primary-btn save-story-btn">Save</a>
 						<a href="#" class="btn unpublish-story-btn">Unpublish</a>
@@ -48,9 +52,8 @@
 						<a href="#" class="btn save-story-btn">Save As Draft</a>
 					{{/if}}
 						<a href="#" class="btn primary-btn delete-story-btn">Delete</a>
-				
-				{{/if}}
-			</div>
+				</div>
+			{{/if}}
 		</div>
 	</div>
 </template>
