@@ -67,7 +67,7 @@ Template.dashboardExcerpt.helpers({
 	},
 	textExcerpt: function(){
 		if (this.text.length > 300){
-			return this.text.substr(0, 140) + '...'
+			return this.text.substr(0, 300) + '...'
 		} else {
 			return this.text;
 		}
