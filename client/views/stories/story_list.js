@@ -24,6 +24,14 @@ Template.storyList.helpers({
 	noUser: function(){
 		if (!Meteor.userId())
 			return true
+	},
+	stories: function(){
+		var sortBy = Session.get('sortBy');
+
+		if (sortBy == 'score')
+			return Stories.find({}, {sort: {score: -1}});
+		else
+			return Stories.find({}, {sort: {publishedOn: -1}});
 	}
 });
 

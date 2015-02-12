@@ -2,12 +2,14 @@
 	<header class="hero-header">
 		<div class="wrapper story-wrapper">
 			<h4 class="hero-title strong">{{username}}'s Stories</h4>
+			<button class="btn primary-btn sort-btn sort-score-btn">Sort By Score</button>
+			<button class="btn primary-btn sort-btn sort-date-btn">Sort By Date</button>
 		</div>
 	</header>
 	<div class="wrapper story-wrapper">
-		{{#if this}}
+		{{#if stories}}
 			<div class="user-stories">
-				{{#each this}}
+				{{#each stories}}
 					{{>storyListExcerpt}}
 				{{/each}}
 			</div>

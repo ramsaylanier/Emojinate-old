@@ -39,5 +39,11 @@ Template.layout.events({
 				Router.go(url);
 			}, 600);
 		}
+	},
+	'click .sort-date-btn': function(){
+		Session.set('sortBy', 'date');
+	},
+	'click .sort-score-btn': function(){
+		Session.set('sortBy', 'score');
 	}
 })

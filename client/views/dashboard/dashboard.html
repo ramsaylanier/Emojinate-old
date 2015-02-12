@@ -34,6 +34,11 @@
 			<p>{{publishedOnYear}}</p>
 		</div>
 
+		<div class="story-voting {{upvoted}}">
+
+			<p>{{#if score}}{{score}}{{else}}0{{/if}}</p>
+		</div>
+
 		<p class="emoji-string">
 			{{#each emojis}}
 				<span class="emoji">{{#emojione}}{{this.shortname}}{{/emojione}}</span>
