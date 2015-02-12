@@ -15,5 +15,5 @@ Meteor.publish('userStories', function(username){
 
 
 Meteor.publish('publishedStories', function(limit){
-	return Stories.find({published: true}, {limit: limit, sort: {score: -1, publishedOn: -1}});
+	return Stories.find({published: true}, {limit: limit, sort: {publishedOn: -1}});
 })
