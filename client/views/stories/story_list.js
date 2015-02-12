@@ -69,8 +69,8 @@ Template.storyListExcerpt.helpers({
 			return moment(this.createdOn).format('YYYY');
 	},
 	textExcerpt: function(){
-		if (this.text.length > 300){
-			return this.text.substr(0, 300) + '...'
+		if (this.text.length > 500){
+			return this.text.substr(0, 500) + '...'
 		} else {
 			return this.text;
 		}
