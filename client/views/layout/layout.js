@@ -45,5 +45,10 @@ Template.layout.events({
 	},
 	'click .sort-score-btn': function(){
 		Session.set('sortBy', 'score');
+	},
+	'click .load-more-btn': function(){
+		console.log(Iron.controller());
+		var currentLimit = Session.get('limit') || 15;
+		Session.set('limit', currentLimit + 15);
 	}
 })

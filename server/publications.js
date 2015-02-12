@@ -15,5 +15,6 @@ Meteor.publish('userStories', function(username){
 
 
 Meteor.publish('publishedStories', function(options){
+	console.log(options);
 	return Stories.find({published: true}, options);
 })

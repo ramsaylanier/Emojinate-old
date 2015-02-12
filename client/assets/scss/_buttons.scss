@@ -100,3 +100,8 @@
 	top: 50%;
 	@include translateY(-50%);
 }
+
+.load-more-btn{
+	width: 100%;
+	padding: 1rem;
+}

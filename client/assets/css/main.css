@@ -1096,6 +1096,12 @@ input[type=submit]:hover {
   transform: translateY(-50%);
 }
 
+/* line 104, ../scss/_buttons.scss */
+.load-more-btn {
+  width: 100%;
+  padding: 1rem;
+}
+
 /* line 1, ../scss/_stories.scss */
 .user-story {
   position: relative;

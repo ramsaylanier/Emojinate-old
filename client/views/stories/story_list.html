@@ -36,15 +36,19 @@
 
 		<div class="story-list">
 			<div class="wrapper story-wrapper">
-				{{#if this}}
+				{{#if stories}}
 					<div class="user-stories">
-						{{#each this}}
+						{{#each stories}}
 							{{>storyListExcerpt}}
 						{{/each}}
 					</div>
 				{{else}}
 					<p>There are no recent deepmojis.</p>
 				{{/if}}
+
+				{{#if nextPath}}
+					<button class="btn primary-btn load-more-btn">Load more</button>
+			    {{/if}}
 			</div>
 		</div>
 	</section>
