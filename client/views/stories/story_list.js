@@ -1,4 +1,5 @@
 Template.storyList.rendered = function(){
+	console.log('rendered');
 	Meteor.defer(function(){
 		$('.user-story').removeClass('off-page');
 	})
@@ -28,8 +29,9 @@ Template.storyList.helpers({
 });
 
 Template.storyListExcerpt.rendered = function(){
+	console.log('rendered');
 	Meteor.defer(function(){
-		this.$('.user-story').removeClass('off-page');
+		$('.user-story').removeClass('off-page');
 	})
 }
 
