@@ -66,7 +66,7 @@ Template.dashboardExcerpt.helpers({
 			return moment(this.createdOn).format('YYYY');
 	},
 	textExcerpt: function(){
-		if (this.text.length > 140){
+		if (this.text.length > 300){
 			return this.text.substr(0, 140) + '...'
 		} else {
 			return this.text;

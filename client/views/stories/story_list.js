@@ -70,7 +70,7 @@ Template.storyListExcerpt.helpers({
 	},
 	textExcerpt: function(){
 		if (this.text.length > 140){
-			return this.text.substr(0, 140) + '...'
+			return this.text.substr(0, 300) + '...'
 		} else {
 			return this.text;
 		}
