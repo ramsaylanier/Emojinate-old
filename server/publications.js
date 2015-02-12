@@ -14,6 +14,6 @@ Meteor.publish('userStories', function(username){
 })
 
 
-Meteor.publish('publishedStories', function(limit){
-	return Stories.find({published: true}, {limit: limit, sort: {publishedOn: -1}});
+Meteor.publish('publishedStories', function(options){
+	return Stories.find({published: true}, options);
 })

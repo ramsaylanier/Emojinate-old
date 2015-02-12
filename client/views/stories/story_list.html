@@ -36,9 +36,9 @@
 
 		<div class="story-list">
 			<div class="wrapper story-wrapper">
-				{{#if stories}}
+				{{#if this}}
 					<div class="user-stories">
-						{{#each stories}}
+						{{#each this}}
 							{{>storyListExcerpt}}
 						{{/each}}
 					</div>
