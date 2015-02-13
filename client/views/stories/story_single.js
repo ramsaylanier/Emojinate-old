@@ -22,9 +22,6 @@ Template.storySingle.helpers({
 
 		if (voted)
 			return 'upvoted'
-	},
-	profileImage: function(){
-		return Meteor.users.findOne({username: this.authorName}).profileImage;
 	}
 })
 
