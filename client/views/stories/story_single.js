@@ -22,6 +22,9 @@ Template.storySingle.helpers({
 
 		if (voted)
 			return 'upvoted'
+	},
+	profileImage: function(){
+		return Meteor.users.findOne({username: this.authorName}).profileImage;
 	}
 })
 
@@ -63,6 +66,7 @@ Template.storySingle.events({
 				} else {
 					GAnalytics.event("story","publish","success");
 					throwError('Story successfully published.', 'error');
+					Router.go('/');
 				}
 			});
 		} else {

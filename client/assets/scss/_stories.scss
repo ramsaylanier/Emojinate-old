@@ -256,3 +256,9 @@
 		opacity: 0.0;
 	}
 }
+
+.profile-image{
+	max-width: 100px;
+	position: relative;
+	@include border-radius(50%);
+}

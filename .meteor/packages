@@ -16,3 +16,5 @@ datariot:ganalytics
 velocityjs:velocityjs
 service-configuration
 mystor:device-detection
+jparker:crypto-base64
+http

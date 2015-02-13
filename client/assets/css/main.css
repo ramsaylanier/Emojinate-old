@@ -1422,6 +1422,15 @@ input[type=submit]:hover {
   opacity: 0.0;
 }
 
+/* line 260, ../scss/_stories.scss */
+.profile-image {
+  max-width: 100px;
+  position: relative;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
 /* line 1, ../scss/_modals.scss */
 .modal {
   position: fixed;
@@ -1462,16 +1471,21 @@ input[type=submit]:hover {
 }
 
 /* line 13, ../scss/_zindex.scss */
-.story-date {
-  z-index: 700;
+.profile-image {
+  z-index: 750;
 }
 
 /* line 17, ../scss/_zindex.scss */
+.story-date, .story-voting {
+  z-index: 700;
+}
+
+/* line 21, ../scss/_zindex.scss */
 .main-section {
   z-index: 600;
 }
 
-/* line 21, ../scss/_zindex.scss */
+/* line 25, ../scss/_zindex.scss */
 .welcome-section {
   z-index: 500;
 }

@@ -13,6 +13,12 @@ Template.userStories.helpers({
 			return Stories.find({}, {sort: {score: -1}});
 		else
 			return Stories.find({}, {sort: {publishedOn: -1}});
+	},
+	profileImage: function(){
+		var username = Iron.controller().params.username;
+		var image = Meteor.users.findOne({username: username}).profileImage;
+		var image = image.substr(0, image.length - 12) + '.jpeg';
+		return image;
 	}
 });
 

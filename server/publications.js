@@ -7,14 +7,14 @@ Meteor.publish('dashboardStories', function(userId){
 })
 
 Meteor.publish('userStories', function(username){
-	console.log(username);
 	var user = Meteor.users.findOne({username: username});
-	console.log(user);
 	return Stories.find({author: user._id, published: true});
 })
 
-
 Meteor.publish('publishedStories', function(options){
-	console.log(options);
 	return Stories.find({published: true}, options);
+})
+
+Meteor.publish('userPhoto', function(username){
+	return Meteor.users.find({username: username}, {fields: {profileImage: 1}});
 })
